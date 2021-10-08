@@ -1,0 +1,54 @@
+/* 多列侧边栏 */
+
+
+/* https://discord.com/channels/725182569297215569/752845138148982877/885123354359631942 */
+
+:root {
+    --masonry-startWidth: 450px;
+    /* DEFAULT: 550px; Use "unset" to prevent loading in grid like format */
+    --masonry-minWidth: 60px;
+    --masonry-maxWidth: 600px;
+    --masonry-startHeight: 434px;
+    /* DEFAULT: 243px; Use "unset" to prevent loading in grid like format */
+    --masonry-minHeight: 56px;
+}
+
+.cp__right-sidebar-inner.flex.flex-col.h-full {
+    overflow: auto;
+    background-color: #000;
+}
+
+.sidebar-item-list {
+    background-color: #0d0d0d;
+    height: 91vh !important;
+    overflow: unset;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-bottom: 0;
+}
+
+.cp__right-sidebar .sidebar-item {
+    display: inline-block;
+    align-self: flex-start;
+    overflow-y: auto;
+    width: var(--masonry-startWidth);
+    min-width: var(--masonry-minWidth);
+    max-width: var(--masonry-maxWidth);
+    margin-right: 8px;
+}
+
+
+/* ==== tables wrap === */
+
+.table-auto {
+    table-layout: fixed;
+    width: 90%;
+}
+
+.table-auto td.whitespace-nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

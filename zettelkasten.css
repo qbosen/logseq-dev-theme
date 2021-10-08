@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.zettel-box, a.tag[data-ref=answer], a.tag[data-ref=question], a.tag[data-ref="reference notes"], a.tag[data-ref="relevant notes"], a.tag[data-ref="permanent notes"], a.tag[data-ref="literature notes"], a.tag[data-ref="fleeting notes"] {
+  background: #FFFFFF;
+  background-size: 100%;
+  color: #000000;
+  padding: 2px 5px 2px 5px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 500;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: thin;
+  position: relative;
+  box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px #DFDFDF;
+}
+
+a.tag[data-ref="fleeting notes"] {
+  border-color: #f21da140;
+}
+
+a.tag[data-ref="literature notes"] {
+  border-color: #215F0040;
+}
+
+a.tag[data-ref="permanent notes"] {
+  background-image: linear-gradient(90deg, #1DA1F2, #1DA1F2);
+  border-radius: 3px 0 0 3px;
+}
+
+a.tag[data-ref="relevant notes"] {
+  color: #1DA1F2;
+  border-color: #FFFFFF;
+}
+
+a.tag[data-ref="reference notes"] {
+  border-color: #f26e1d40;
+}
+
+/* 自定义 */
+a.tag[data-ref=question] {
+  border-color: #FFB6C1 !important;
+  background: #FFB6C1 !important;
+  color: #000 !important;
+}
+a.tag[data-ref=question]::before {
+  content: "❓ ";
+  display: inline-block;
+}
+
+a.tag[data-ref=answer] {
+  border-color: #90EE90 !important;
+  background: #90EE90 !important;
+  color: #000 !important;
+}
+a.tag[data-ref=answer]:before {
+  content: "🙋 ";
+  display: inline-block;
+}

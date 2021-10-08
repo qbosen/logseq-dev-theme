@@ -1,0 +1,30 @@
+mark {
+  text-decoration-color: #ffc600;
+}
+mark .yellow {
+  text-decoration-color: #fff3a3;
+}
+mark .pink {
+  text-decoration-color: #f2b3cf;
+}
+mark .blue {
+  text-decoration-color: #b5d3ff;
+}
+mark .green {
+  text-decoration-color: #bbfabb;
+}
+mark .red {
+  text-decoration-color: #ff5582;
+}
+mark .grey {
+  text-decoration-color: #cacfd9;
+}
+mark .gray {
+  text-decoration-color: #cacfd9;
+}
+mark .orange {
+  text-decoration-color: #ffb86c;
+}
+mark .purple {
+  text-decoration-color: #d2b3ff;
+}
