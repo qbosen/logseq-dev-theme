@@ -39,11 +39,11 @@ a.tag[data-ref="permanent notes"] {
   line-height: 1em;
   font-weight: 500;
   border-radius: 5px 5px 5px 5px;
-  border-color: #000000;
+  border-color: inherit;
   border-style: solid;
   border-width: thin;
   position: relative;
-  box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px #DFDFDF;
+  box-shadow: 0px 1px 3px -1px inherit, 0px -1px 5px #DFDFDF;
   background-image: linear-gradient(90deg, #1DA1F2, #1DB6F2);
 }
 

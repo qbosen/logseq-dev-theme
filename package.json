@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "description": "A custom theme for dev",
     "logseq": {
-        "themes": [
-            {
+        "themes": [{
                 "name": "Dev theme",
                 "url": "./custom.css",
                 "description": "A custom theme for dev"
@@ -20,12 +19,13 @@
         "icon": "./logo.png"
     },
     "scripts": {
-        "build:main": "yarn sass src/main.scss custom.css --no-source-map",
-        "build:zt": "yarn sass src/zettelkasten.scss zettelkasten.css --no-source-map",
+        "build:main": "yarn sass src/main.scss main.css --no-source-map",
+        "build:cust": "yarn sass src/custom.scss custom.css --no-source-map",
+        "build:bt": "yarn sass src/bullet_threading.scss bullet_threading.css --no-source-map",
         "build:hl": "yarn sass src/highlights.scss highlights.css --no-source-map",
         "build:sb": "yarn sass src/sidebar.scss sidebar.css --no-source-map",
-        "build:bt": "yarn sass src/bullet_threading.scss bullet_threading.css --no-source-map",
-        "build": "yarn build:main && yarn build:bt && yarn build:zt && yarn build:hl && yarn build:sb"
+        "build:zt": "yarn sass src/zettelkasten.scss zettelkasten.css --no-source-map",
+        "build": "yarn build:main && yarn build:cust && yarn build:bt && yarn build:hl && yarn build:sb && yarn build:zt"
     },
     "devDependencies": {
         "@semantic-release/changelog": "^6.0.0",
