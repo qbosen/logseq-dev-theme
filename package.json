@@ -25,7 +25,7 @@
         "build:hl": "yarn sass src/highlights.scss highlights.css --no-source-map",
         "build:sb": "yarn sass src/sidebar.scss sidebar.css --no-source-map",
         "build:zt": "yarn sass src/zettelkasten.scss zettelkasten.css --no-source-map",
-        "build": "yarn build:main && yarn build:cust && yarn build:bt && yarn build:hl && yarn build:sb && yarn build:zt"
+        "build": "yarn build:main && yarn build:bt && yarn build:hl && yarn build:sb && yarn build:zt"
     },
     "devDependencies": {
         "@semantic-release/changelog": "^6.0.0",
