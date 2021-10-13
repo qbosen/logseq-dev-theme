@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/qbosen/logseq-dev-theme/compare/v1.0.0...v1.1.0) (2021-10-13)
+
+
+### Bug Fixes
+
+* adapt for Logseq 0.4.3 ([f434c51](https://github.com/qbosen/logseq-dev-theme/commit/f434c51ccb4ad0d3057f231f90096652fb96b26b))
+* marker styles ([48773f5](https://github.com/qbosen/logseq-dev-theme/commit/48773f5bd8286e5fe5de696eed8b13e2bc870d53))
+* revert checkbox size ([fef3704](https://github.com/qbosen/logseq-dev-theme/commit/fef370465913becf5e9843930cdcbda281671012))
+* when left-sidebar is on, the user should still see right side controls ([71fc089](https://github.com/qbosen/logseq-dev-theme/commit/71fc0899d6da3c6301c22410debd5d61966b93ec))
+
+
+### Features
+
+* change code font from fira-code to jetbrains-mono ([ef71dc3](https://github.com/qbosen/logseq-dev-theme/commit/ef71dc38067d5858ed5c33b3fb2750d13ec5cb7b))
+
 # 1.0.0 (2021-10-08)
 
 
