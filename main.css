@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
 @import url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-sans@3.046R/source-sans-3VF.css");
 @font-face {
@@ -163,16 +164,17 @@ textarea {
   color: var(--ls-primary-text-color);
 }
 
+/* 多列sidebar后 调整样式 */
 .sidebar-item.content > div > div:first-of-type {
   position: sticky;
   top: 0;
-  padding: 1rem;
-  margin: -1rem;
+  padding: 0.5rem;
+  margin: -0.8rem;
   z-index: 10;
 }
 
 .sidebar-item.content > div > div:first-of-type + div {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .cp__right-sidebar-inner .resizer {
