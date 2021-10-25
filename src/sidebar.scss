@@ -15,11 +15,25 @@
 
 .cp__right-sidebar-inner.flex.flex-col.h-full {
     overflow: auto;
-    background-color: #000;
+    // background-color: #000;
+}
+
+
+/* 多列sidebar后 调整样式 */
+
+.sidebar-item.content>div>div:first-of-type {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    z-index: 10;
+    &+div {
+        margin-top: 1rem;
+    }
 }
 
 .sidebar-item-list {
-    background-color: #0d0d0d;
+    // background-color: #0d0d0d;
     height: 91vh !important;
     overflow: unset;
     display: flex;

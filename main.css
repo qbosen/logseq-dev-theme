@@ -1092,3 +1092,8 @@ html[data-theme=light] {
 :root {
   --ls-block-bullet-threading-width: 2px;
 }
+
+/* 宽屏模式下 代码也变宽 */
+.extensions__code > .CodeMirror {
+  max-width: 100% !important;
+}

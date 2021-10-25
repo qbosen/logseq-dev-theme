@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+@charset "UTF-8";
+/* 直接替换整个custom.css, 使用文件方式导入的css文件不能及时更新 */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
 @import url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-sans@3.046R/source-sans-3VF.css");
 @font-face {
   font-family: "Source Han Sans VF";
@@ -15,10 +17,9 @@
 :root {
   --ct-text-size: 16px;
   --ct-line-height: 1.6;
-  --ls-font-family: "Only Emoji", "Source Sans 3 VF", "Source Han Sans VF",
-    sans-serif;
+  --ls-font-family: "Only Emoji", "Source Sans 3 VF", "Source Han Sans VF", sans-serif;
   --ct-page-title-font-family: var(--ls-font-family);
-  --ct-code-font-family: "Fira Code", monospace;
+  --ct-code-font-family: "JetBrains Mono", monospace;
 }
 
 html,
@@ -1137,11 +1138,21 @@ mark .purple {
 
 .cp__right-sidebar-inner.flex.flex-col.h-full {
   overflow: auto;
-  background-color: #000;
+}
+
+/* 多列sidebar后 调整样式 */
+.sidebar-item.content > div > div:first-of-type {
+  position: sticky;
+  top: 0;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  z-index: 10;
+}
+.sidebar-item.content > div > div:first-of-type + div {
+  margin-top: 1rem;
 }
 
 .sidebar-item-list {
-  background-color: #0d0d0d;
   height: 91vh !important;
   overflow: unset;
   display: flex;
@@ -1252,4 +1263,89 @@ a.tag[data-ref="reference notes"] {
   border-width: thin;
   position: relative;
   box-shadow: 0px 1px 3px -1px #f26e1d40, 0px -1px 5px #DFDFDF;
+}
+
+[data-ref=inbox]::before {
+  content: "📥 ";
+  display: inline-block;
+}
+
+[data-ref="mit 3"]::before {
+  content: "⭐ ";
+  display: inline-block;
+}
+
+[data-ref="daily reading"]::before {
+  content: "📖 ";
+  display: inline-block;
+}
+
+[data-ref=tasks]::before {
+  content: "💻 ";
+  display: inline-block;
+}
+
+[data-ref="daily log"]::before {
+  content: "📃 ";
+  display: inline-block;
+}
+
+[data-ref^=project] {
+  border-color: #b6fff5 !important;
+  background: #b6fff5 !important;
+  color: #000 !important;
+}
+[data-ref^=project]::before {
+  content: "🎯 ";
+  display: inline-block;
+}
+
+[data-ref^=resource]::before {
+  content: "🗂️ ";
+  display: inline-block;
+}
+
+a.tag[data-ref^=fitiness] {
+  border-color: #87c843 !important;
+  background: #87c843 !important;
+  color: #000 !important;
+}
+a.tag[data-ref^=fitiness]::before {
+  content: "🏋️ ";
+  display: inline-block;
+}
+
+a.tag[data-ref^=example] {
+  border-color: #41e5eb !important;
+  background: #41e5eb !important;
+  color: #000 !important;
+}
+a.tag[data-ref^=example]::before {
+  content: "🔎 ";
+  display: inline-block;
+}
+
+a.tag[data-ref=question] {
+  border-color: #FFB6C1 !important;
+  background: #FFB6C1 !important;
+  color: #000 !important;
+}
+a.tag[data-ref=question]::before {
+  content: "❓ ";
+  display: inline-block;
+}
+
+a.tag[data-ref^=recommend] {
+  border-color: #ed5133 !important;
+  background: #ed5133 !important;
+  color: #000 !important;
+}
+a.tag[data-ref^=recommend]::before {
+  content: "❤️ ";
+  display: inline-block;
+}
+
+/* 宽屏模式下 代码也变宽 */
+.extensions__code > .CodeMirror {
+  max-width: 100% !important;
 }
