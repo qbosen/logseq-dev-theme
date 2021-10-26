@@ -1,14 +1,16 @@
 @charset "UTF-8";
 /* 直接替换整个custom.css, 使用文件方式导入的css文件不能及时更新 */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
-@import url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-sans@3.046R/source-sans-3VF.css");
-@font-face {
-  font-family: "Source Han Sans VF";
-  font-weight: 200 900;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-han-sans@release/Variable/WOFF2/OTF/Subset/SourceHanSansCN-VF.otf.woff2");
+/* 思源字体不支持中文斜体 */
+/* @font-face {
+    font-family: "Source Han Sans VF";
+    font-weight: 200 900;
+    font-style: normal;
+    font-stretch: normal;
+    // The following is 8MB even after compression
+    src: url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-han-sans@release/Variable/WOFF2/OTF/Subset/SourceHanSansCN-VF.otf.woff2");
 }
+ */
 @font-face {
   font-family: "Only Emoji";
   src: local("Apple Color Emoji"), local("Android Emoji"), local("Segoe UI Emoji"), local("Segoe UI");
@@ -17,7 +19,7 @@
 :root {
   --ct-text-size: 16px;
   --ct-line-height: 1.6;
-  --ls-font-family: "Only Emoji", "Source Sans 3 VF", "Source Han Sans VF", sans-serif;
+  --ls-font-family: "Only Emoji", "system-ui", sans-serif;
   --ct-page-title-font-family: var(--ls-font-family);
   --ct-code-font-family: "JetBrains Mono", monospace;
 }
@@ -553,22 +555,22 @@ a:hover > .bullet-container .bullet {
 }
 
 /* embed */
-.embed,
+/* 删除hover特效 简化embed */
+/* .embed,
 .embed-page,
 .embed-block {
-  box-shadow: 1px 2px black;
+  box-shadow: 1px 2px rgba(0, 0, 0);
   padding: 0.75em 0.5em;
   border: 2px solid #000;
   border-radius: 8px;
   margin: 0.2em 0 0.5em;
   transition: all ease-in 0.3s;
-}
-
+} 
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px rgba(0, 0, 0);
   transform: translate(-7px, -6px);
 }
-
+ */
 /* page embed */
 .embed-page,
 .cp__right-sidebar .embed-page {
@@ -1265,42 +1267,83 @@ a.tag[data-ref="reference notes"] {
   box-shadow: 0px 1px 3px -1px #f26e1d40, 0px -1px 5px #DFDFDF;
 }
 
-[data-ref=inbox]::before {
+/* type: tag, page, both */
+a[data-ref=inbox] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref=inbox]::before {
   content: "📥 ";
   display: inline-block;
 }
 
-[data-ref="mit 3"]::before {
+a[data-ref="mit 3"] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref="mit 3"]::before {
   content: "⭐ ";
   display: inline-block;
 }
 
-[data-ref="daily reading"]::before {
+a[data-ref="daily reading"] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref="daily reading"]::before {
   content: "📖 ";
   display: inline-block;
 }
 
-[data-ref=tasks]::before {
+a[data-ref=tasks] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref=tasks]::before {
   content: "💻 ";
   display: inline-block;
 }
 
-[data-ref="daily log"]::before {
+a[data-ref="daily log"] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref="daily log"]::before {
   content: "📃 ";
   display: inline-block;
 }
 
-[data-ref^=project] {
+a.tag[data-ref^=project] {
   border-color: #b6fff5 !important;
   background: #b6fff5 !important;
   color: #000 !important;
 }
-[data-ref^=project]::before {
+a.tag[data-ref^=project]::before {
   content: "🎯 ";
   display: inline-block;
 }
 
-[data-ref^=resource]::before {
+a.page-ref[data-ref^=project] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a.page-ref[data-ref^=project]::before {
+  content: "🎯 ";
+  display: inline-block;
+}
+
+a[data-ref^=resource] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref^=resource]::before {
   content: "🗂️ ";
   display: inline-block;
 }
@@ -1315,12 +1358,12 @@ a.tag[data-ref^=fitiness]::before {
   display: inline-block;
 }
 
-a.tag[data-ref^=example] {
+a.tag[data-ref=example] {
   border-color: #41e5eb !important;
   background: #41e5eb !important;
   color: #000 !important;
 }
-a.tag[data-ref^=example]::before {
+a.tag[data-ref=example]::before {
   content: "🔎 ";
   display: inline-block;
 }
@@ -1336,8 +1379,8 @@ a.tag[data-ref=question]::before {
 }
 
 a.tag[data-ref^=recommend] {
-  border-color: #ed5133 !important;
-  background: #ed5133 !important;
+  border-color: #f37777 !important;
+  background: #f37777 !important;
   color: #000 !important;
 }
 a.tag[data-ref^=recommend]::before {

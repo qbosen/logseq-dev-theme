@@ -1,91 +1,55 @@
-[data-ref="inbox"] {
-    &::before {
-        content: "📥 ";
-        display: inline-block;
+/* type: tag, page, both */
+
+@function select_item($data-ref, $match-prefix:false, $type:'tag') {
+    $item: a;
+    @if $type=='tag' {
+        $item: $item+ '.tag';
+    }
+    @else if $type=='page' {
+        $item: $item+ '.page-ref';
+    }
+    $select-attr: '';
+    @if $match-prefix {
+        $select-attr: '[data-ref^="#{$data-ref}"]';
+    }
+    @else {
+        $select-attr: '[data-ref="#{$data-ref}"]';
+    }
+    @return $item+$select-attr;
+}
+
+@mixin content-style($bg-color:inherit, $font-color:inherit, $prefix-content:'') {
+    @if $bg-color {
+        border-color: $bg-color !important;
+        background: $bg-color !important;
+    }
+    @if $font-color {
+        color: $font-color !important;
+    }
+    @if $prefix-content {
+        &::before {
+            content: "#{$prefix-content} ";
+            display: inline-block;
+        }
     }
 }
 
-[data-ref="mit 3"] {
-    &::before {
-        content: "⭐ ";
-        display: inline-block;
+@mixin ref-style($data-ref, $match-prefix:false, $prefix-content:'', $type:'tag', $bg-color:'', $font-color:'') {
+    $select-item: select-item($data-ref, $match-prefix, $type);
+    #{$select-item} {
+        @include content-style($bg-color, $font-color, $prefix-content)
     }
 }
 
-[data-ref="daily reading"] {
-    &::before {
-        content: "📖 ";
-        display: inline-block;
-    }
-}
-
-[data-ref="tasks"] {
-    &::before {
-        content: "💻 ";
-        display: inline-block;
-    }
-}
-
-[data-ref="daily log"] {
-    &::before {
-        content: "📃 ";
-        display: inline-block;
-    }
-}
-
-[data-ref^="project"] {
-    border-color: #b6fff5 !important;
-    background: #b6fff5 !important;
-    color: #000 !important;
-    &::before {
-        content: "🎯 ";
-        display: inline-block;
-    }
-}
-
-[data-ref^="resource"] {
-    &::before {
-        content: "🗂️ ";
-        display: inline-block;
-    }
-}
-
-a.tag[data-ref^="fitiness"] {
-    border-color: #87c843 !important;
-    background: #87c843 !important;
-    color: #000 !important;
-    &::before {
-        content: "🏋️ ";
-        display: inline-block;
-    }
-}
-
-a.tag[data-ref^="example"] {
-    border-color: #41e5eb !important;
-    background: #41e5eb !important;
-    color: #000 !important;
-    &::before {
-        content: "🔎 ";
-        display: inline-block;
-    }
-}
-
-a.tag[data-ref="question"] {
-    border-color: #FFB6C1 !important;
-    background: #FFB6C1 !important;
-    color: #000 !important;
-    &::before {
-        content: "❓ ";
-        display: inline-block;
-    }
-}
-
-a.tag[data-ref^="recommend"] {
-    border-color: #ed5133 !important;
-    background: #ed5133 !important;
-    color: #000 !important;
-    &::before {
-        content: "❤️ ";
-        display: inline-block;
-    }
-}
+@include ref-style('inbox', false, "📥", 'both');
+@include ref-style('mit 3', false, "⭐", 'both');
+@include ref-style('daily reading', false, "📖", 'both');
+@include ref-style('tasks', false, "💻", 'both');
+@include ref-style('daily log', false, "📃", 'both');
+@include ref-style('project', true, "🎯", 'tag', #b6fff5, #000);
+@include ref-style('project', true, "🎯", 'page');
+@include ref-style('resource', true, "🗂️", 'both');
+@include ref-style('fitiness', true, "🏋️", 'tag', #87c843, #000);
+@include ref-style('example', false, "🔎", 'tag', #41e5eb, #000);
+@include ref-style('question', false, "❓", 'tag', #FFB6C1, #000);
+@include ref-style('recommend', true, "❤️", 'tag', #f37777, #000);

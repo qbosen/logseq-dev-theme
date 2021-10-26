@@ -1,40 +1,81 @@
 @charset "UTF-8";
-[data-ref=inbox]::before {
+/* type: tag, page, both */
+a.tag[data-ref=inbox] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.tag[data-ref=inbox]::before {
   content: "📥 ";
   display: inline-block;
 }
 
-[data-ref="mit 3"]::before {
+a.tag[data-ref="mit 3"] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.tag[data-ref="mit 3"]::before {
   content: "⭐ ";
   display: inline-block;
 }
 
-[data-ref="daily reading"]::before {
+a.tag[data-ref="daily reading"] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.tag[data-ref="daily reading"]::before {
   content: "📖 ";
   display: inline-block;
 }
 
-[data-ref=tasks]::before {
+a.tag[data-ref=tasks] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.tag[data-ref=tasks]::before {
   content: "💻 ";
   display: inline-block;
 }
 
-[data-ref="daily log"]::before {
+a.tag[data-ref="daily log"] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.tag[data-ref="daily log"]::before {
   content: "📃 ";
   display: inline-block;
 }
 
-[data-ref^=project] {
+a.tag[data-ref^=project] {
   border-color: #b6fff5 !important;
   background: #b6fff5 !important;
   color: #000 !important;
 }
-[data-ref^=project]::before {
+a.tag[data-ref^=project]::before {
   content: "🎯 ";
   display: inline-block;
 }
 
-[data-ref^=resource]::before {
+a.page[data-ref^=project] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a.page[data-ref^=project]::before {
+  content: "🎯 ";
+  display: inline-block;
+}
+
+a[data-ref^=resource] {
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+}
+a[data-ref^=resource]::before {
   content: "🗂️ ";
   display: inline-block;
 }
@@ -49,12 +90,12 @@ a.tag[data-ref^=fitiness]::before {
   display: inline-block;
 }
 
-a.tag[data-ref^=example] {
+a.tag[data-ref=example] {
   border-color: #41e5eb !important;
   background: #41e5eb !important;
   color: #000 !important;
 }
-a.tag[data-ref^=example]::before {
+a.tag[data-ref=example]::before {
   content: "🔎 ";
   display: inline-block;
 }
@@ -70,8 +111,8 @@ a.tag[data-ref=question]::before {
 }
 
 a.tag[data-ref^=recommend] {
-  border-color: #ed5133 !important;
-  background: #ed5133 !important;
+  border-color: #fd7b2f !important;
+  background: #fd7b2f !important;
   color: #000 !important;
 }
 a.tag[data-ref^=recommend]::before {
