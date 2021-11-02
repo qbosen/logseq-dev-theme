@@ -1388,6 +1388,26 @@ a.tag[data-ref^=recommend]::before {
   display: inline-block;
 }
 
+a.tag[data-ref=quotes] {
+  border-color: #83ea9e !important;
+  background: #83ea9e !important;
+  color: #000 !important;
+}
+a.tag[data-ref=quotes]::before {
+  content: "📎 ";
+  display: inline-block;
+}
+
+a.tag[data-ref=quote] {
+  border-color: #83ea9e !important;
+  background: #83ea9e !important;
+  color: #000 !important;
+}
+a.tag[data-ref=quote]::before {
+  content: " ";
+  display: inline-block;
+}
+
 /* 宽屏模式下 代码也变宽 */
 .extensions__code > .CodeMirror {
   max-width: 100% !important;

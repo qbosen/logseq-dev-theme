@@ -53,3 +53,5 @@
 @include ref-style('example', false, "🔎", 'tag', #41e5eb, #000);
 @include ref-style('question', false, "❓", 'tag', #FFB6C1, #000);
 @include ref-style('recommend', true, "❤️", 'tag', #f37777, #000);
+@include ref-style('quotes', false, "📎", 'tag', #83ea9e, #000);
+@include ref-style('quote', false, "", 'tag', #83ea9e, #000);
