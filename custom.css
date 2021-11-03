@@ -1196,8 +1196,8 @@ mark.purple {
 
 /* ==== tables wrap === */
 .table-auto {
-  table-layout: fixed;
-  width: 90%;
+  table-layout: auto;
+  width: 100%;
 }
 
 .table-auto td.whitespace-nowrap {
@@ -1425,6 +1425,16 @@ a.tag[data-ref=quote] {
 }
 a.tag[data-ref=quote]::before {
   content: " ";
+  display: inline-block;
+}
+
+a.tag[data-ref="logseq skill"] {
+  border-color: #83ea9e !important;
+  background: #83ea9e !important;
+  color: #000 !important;
+}
+a.tag[data-ref="logseq skill"]::before {
+  content: "💡 ";
   display: inline-block;
 }
 

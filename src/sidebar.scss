@@ -57,8 +57,8 @@
 /* ==== tables wrap === */
 
 .table-auto {
-    table-layout: fixed;
-    width: 90%;
+    table-layout: auto;
+    width: 100%;
 }
 
 .table-auto td.whitespace-nowrap {
