@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/qbosen/logseq-dev-theme/compare/v1.1.0...v1.1.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* block ref preview header opacity ([e3e6894](https://github.com/qbosen/logseq-dev-theme/commit/e3e6894ff9eb2d73148d5d87f1681c459441c8ac))
+* bullets collapse control should not be covered by thread ([d9d6395](https://github.com/qbosen/logseq-dev-theme/commit/d9d63958fca644ab4fd9a28c243537c499e6d046))
+* left sidebar fonts ([ebfbf94](https://github.com/qbosen/logseq-dev-theme/commit/ebfbf94d75f1c27a9645c62375adcb61fdfc8627))
+* make block control a little bit nicer ([350885f](https://github.com/qbosen/logseq-dev-theme/commit/350885fb151a0d11c1697c44f790791966e222f1))
+
 # [1.1.0](https://github.com/qbosen/logseq-dev-theme/compare/v1.0.0...v1.1.0) (2021-10-13)
 
 
