@@ -1,0 +1,13 @@
+/* 个人适配使用 */
+
+
+/* 宽屏模式下 代码也变宽 */
+
+.extensions__code>.CodeMirror {
+    max-width: 100% !important;
+}
+
+root {
+    --ls-tag-text-color: #a4adb4;
+    --ls-tag-text-opacity: .8;
+}

@@ -1,58 +1,71 @@
-/* type: tag, page, both */
-
-@function select_item($data-ref, $match-prefix:false, $type:'tag') {
-    $item: a;
-    @if $type=='tag' {
-        $item: $item+ '.tag';
+    /* type: tag, page, both */
+    
+    @function select_item($data-ref, $match-prefix:false, $type:'tag') {
+        $item: a;
+        @if $type=='tag' {
+            $item: $item+ '.tag';
+        }
+        @else if $type=='page' {
+            $item: $item+ '.page-ref';
+        }
+        $select-attr: '';
+        @if $match-prefix {
+            $select-attr: '[data-ref^="#{$data-ref}"]';
+        }
+        @else {
+            $select-attr: '[data-ref="#{$data-ref}"]';
+        }
+        @return $item+$select-attr;
     }
-    @else if $type=='page' {
-        $item: $item+ '.page-ref';
-    }
-    $select-attr: '';
-    @if $match-prefix {
-        $select-attr: '[data-ref^="#{$data-ref}"]';
-    }
-    @else {
-        $select-attr: '[data-ref="#{$data-ref}"]';
-    }
-    @return $item+$select-attr;
-}
-
-@mixin content-style($bg-color:inherit, $font-color:inherit, $prefix-content:'') {
-    @if $bg-color {
-        border-color: $bg-color !important;
-        background: $bg-color !important;
-    }
-    @if $font-color {
-        color: $font-color !important;
-    }
-    @if $prefix-content {
-        &::before {
-            content: "#{$prefix-content} ";
-            display: inline-block;
+    
+    @mixin content-style($bg-color:inherit, $font-color:inherit, $prefix-content:'', $with-border:true) {
+        @if $bg-color {
+            border-color: $bg-color !important;
+            background: $bg-color !important;
+        }
+        @if $font-color {
+            color: $font-color !important;
+        }
+        @if $with-border {
+            border: 2px solid $bg-color;
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            line-height: 1.4;
+            font-size: 0.8em;
+            &:hover {
+                $hover-color: adjust-color($bg-color, $whiteness: 5%);
+                background: $hover-color !important;
+                border-color: $hover-color !important;
+            }
+        }
+        @if $prefix-content {
+            &::before {
+                content: "#{$prefix-content} ";
+                display: inline-block;
+            }
         }
     }
-}
-
-@mixin ref-style($data-ref, $match-prefix:false, $prefix-content:'', $type:'tag', $bg-color:'', $font-color:'') {
-    $select-item: select-item($data-ref, $match-prefix, $type);
-    #{$select-item} {
-        @include content-style($bg-color, $font-color, $prefix-content)
+    
+    @mixin ref-style($data-ref, $match-prefix:false, $with-border:true, $prefix-content:'', $type:'tag', $bg-color:'', $font-color:'') {
+        $select-item: select-item($data-ref, $match-prefix, $type);
+        #{$select-item} {
+            @include content-style($bg-color, $font-color, $prefix-content, $with-border)
+        }
     }
-}
-
-@include ref-style('inbox', false, "📥", 'both');
-@include ref-style('mit 3', false, "⭐", 'both');
-@include ref-style('daily reading', false, "📖", 'both');
-@include ref-style('tasks', false, "💻", 'both');
-@include ref-style('daily log', false, "📃", 'both');
-@include ref-style('project', true, "🎯", 'tag', #b6fff5, #000);
-@include ref-style('project', true, "🎯", 'page');
-@include ref-style('resource', true, "🗂️", 'both');
-@include ref-style('fitiness', true, "🏋️", 'tag', #87c843, #000);
-@include ref-style('example', false, "🔎", 'tag', #41e5eb, #000);
-@include ref-style('question', false, "❓", 'tag', #FFB6C1, #000);
-@include ref-style('recommend', true, "❤️", 'tag', #f37777, #000);
-@include ref-style('quotes', false, "📎", 'tag', #83ea9e, #000);
-@include ref-style('quote', false, "", 'tag', #83ea9e, #000);
-@include ref-style('logseq skill', false, "💡", 'tag', #83ea9e, #000);
+    
+    @include ref-style('inbox', false, false, "📥", 'both');
+    @include ref-style('mit 3', false, false, "⭐", 'both');
+    @include ref-style('daily reading', false, false, "📖", 'both');
+    @include ref-style('tasks', false, false, "💻", 'both');
+    @include ref-style('daily log', false, false, "📃", 'both');
+    @include ref-style('project', true, true, "🎯", 'tag', #b6fff5, #000);
+    @include ref-style('project', true, false, "🎯", 'page');
+    @include ref-style('resource', true, false, "🗂️", 'both');
+    @include ref-style('fitiness', true, true, "🏋️", 'tag', #87c843, #000);
+    @include ref-style('example', false, true, "🔎", 'tag', #41e5eb, #000);
+    @include ref-style('question', false, true, "❓", 'tag', #FFB6C1, #000);
+    @include ref-style('recommend', true, true, "❤️", 'tag', #f37777, #000);
+    @include ref-style('quotes', false, true, "📎", 'tag', #83ea9e, #000);
+    @include ref-style('quote', false, true, "", 'tag', #83ea9e, #000);
+    @include ref-style('logseq skill', false, true, "💡", 'tag', #83ea9e, #000);

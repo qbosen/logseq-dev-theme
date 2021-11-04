@@ -712,6 +712,7 @@ pre {
 }
 
 /* Tags */
+/* 
 a.tag {
   border: 2px solid currentColor;
   padding: 0 4px;
@@ -719,19 +720,20 @@ a.tag {
   font-weight: 600;
   line-height: 1.4;
   font-size: 0.8em;
-}
+} 
 
 a.tag:hover {
-  background-color: var(--ct-block-reference-background-hover);
+    background-color: var(--ct-block-reference-background-hover);
 }
-
+*/
 /* Block with-bg-color */
 .with-bg-color {
   border-radius: 4px;
 }
 
 /* Page properties */
-.page-properties, .block-properties {
+.page-properties,
+.block-properties {
   margin: 0 0 0.5em -8px;
   font-size: 0.8em;
   background: var(--ls-secondary-background-color);
@@ -740,7 +742,8 @@ a.tag:hover {
   max-width: var(--ct-block-max-width);
 }
 
-.sidebar-item-list .page-properties, .sidebar-item-list .block-properties {
+.sidebar-item-list .page-properties,
+.sidebar-item-list .block-properties {
   background: var(--ls-tertiary-background-color);
 }
 
@@ -1282,6 +1285,16 @@ a.tag[data-ref^=project] {
   border-color: #b6fff5 !important;
   background: #b6fff5 !important;
   color: #000 !important;
+  border: 2px solid #b6fff5;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref^=project]:hover {
+  background: #c3fff7 !important;
+  border-color: #c3fff7 !important;
 }
 a.tag[data-ref^=project]::before {
   content: "🎯 ";
@@ -1312,6 +1325,16 @@ a.tag[data-ref^=fitiness] {
   border-color: #87c843 !important;
   background: #87c843 !important;
   color: #000 !important;
+  border: 2px solid #87c843;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref^=fitiness]:hover {
+  background: #8dc850 !important;
+  border-color: #8dc850 !important;
 }
 a.tag[data-ref^=fitiness]::before {
   content: "🏋️ ";
@@ -1322,6 +1345,16 @@ a.tag[data-ref=example] {
   border-color: #41e5eb !important;
   background: #41e5eb !important;
   color: #000 !important;
+  border: 2px solid #41e5eb;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref=example]:hover {
+  background: #4ee5eb !important;
+  border-color: #4ee5eb !important;
 }
 a.tag[data-ref=example]::before {
   content: "🔎 ";
@@ -1332,6 +1365,16 @@ a.tag[data-ref=question] {
   border-color: #FFB6C1 !important;
   background: #FFB6C1 !important;
   color: #000 !important;
+  border: 2px solid #FFB6C1;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref=question]:hover {
+  background: #ffc3cc !important;
+  border-color: #ffc3cc !important;
 }
 a.tag[data-ref=question]::before {
   content: "❓ ";
@@ -1342,6 +1385,16 @@ a.tag[data-ref^=recommend] {
   border-color: #f37777 !important;
   background: #f37777 !important;
   color: #000 !important;
+  border: 2px solid #f37777;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref^=recommend]:hover {
+  background: #f38484 !important;
+  border-color: #f38484 !important;
 }
 a.tag[data-ref^=recommend]::before {
   content: "❤️ ";
@@ -1352,6 +1405,16 @@ a.tag[data-ref=quotes] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
+  border: 2px solid #83ea9e;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref=quotes]:hover {
+  background: #90eaa7 !important;
+  border-color: #90eaa7 !important;
 }
 a.tag[data-ref=quotes]::before {
   content: "📎 ";
@@ -1362,6 +1425,16 @@ a.tag[data-ref=quote] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
+  border: 2px solid #83ea9e;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref=quote]:hover {
+  background: #90eaa7 !important;
+  border-color: #90eaa7 !important;
 }
 a.tag[data-ref=quote]::before {
   content: " ";
@@ -1372,13 +1445,29 @@ a.tag[data-ref="logseq skill"] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
+  border: 2px solid #83ea9e;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref="logseq skill"]:hover {
+  background: #90eaa7 !important;
+  border-color: #90eaa7 !important;
 }
 a.tag[data-ref="logseq skill"]::before {
   content: "💡 ";
   display: inline-block;
 }
 
+/* 个人适配使用 */
 /* 宽屏模式下 代码也变宽 */
 .extensions__code > .CodeMirror {
   max-width: 100% !important;
+}
+
+root {
+  --ls-tag-text-color: #a4adb4;
+  --ls-tag-text-opacity: .8;
 }
