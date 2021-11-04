@@ -1,0 +1,13 @@
+/* 直接替换整个custom.css, 使用文件方式导入的css文件不能及时更新 */
+
+@import "main.scss";
+@import "highlights.scss";
+// @import "sidebar.scss";
+@import "zettelkasten.scss";
+@import "advanced_tags.scss";
+
+/* 宽屏模式下 代码也变宽 */
+
+.extensions__code>.CodeMirror {
+    max-width: 100% !important;
+}
