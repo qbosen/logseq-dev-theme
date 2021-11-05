@@ -24,6 +24,7 @@ a.tag[data-ref="literature notes"] {
 
 a.tag[data-ref="permanent notes"] {
     @include zettel-box($border-color: inherit, $color: #FFFFFF);
+    margin-right: 1em;
     background-image: linear-gradient(90deg, #1DA1F2, #1DB6F2);
 }
 

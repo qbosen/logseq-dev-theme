@@ -465,7 +465,6 @@ a.title h1.title {
 /* block reference */
 .block-ref {
   font-size: inherit;
-  padding: 1px 5px 0;
   border-radius: 2px;
   background: var(--ct-block-reference-background);
 }
@@ -475,10 +474,8 @@ a.title h1.title {
 }
 
 .block-ref:before {
-  content: "#";
   color: var(--ls-active-primary-color);
   font-size: 0.8em;
-  padding: 0 4px 0 0;
 }
 
 .block-ref .block-body {
@@ -1062,13 +1059,15 @@ html[data-theme=dark] {
   --ct-block-arrow-color: rgb(165, 165, 165);
   --ct-page-reference-color: var(--ls-active-primary-color);
   --ls-icon-color: var(--ls-primary-text-color);
-  --ct-block-reference-background: rgba(16, 107, 163, 0.2);
-  --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
+  --ct-block-reference-background: rgba(0, 0, 0, 0);
+  --ct-block-reference-background-hover: rgba(0, 0, 0, 0);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
+  --ls-tag-text-color: #a4adb4;
+  --ls-tag-text-opacity: .8;
 }
 
 .dark-theme .image-resize {
@@ -1255,6 +1254,7 @@ a.tag[data-ref="permanent notes"] {
   border-width: thin;
   position: relative;
   box-shadow: 0px 1px 3px -1px inherit, 0px -1px 5px #DFDFDF;
+  margin-right: 1em;
   background-image: linear-gradient(90deg, #1DA1F2, #1DB6F2);
 }
 
@@ -1525,9 +1525,4 @@ a.tag[data-ref="logseq skill"]::before {
 /* 宽屏模式下 代码也变宽 */
 .extensions__code > .CodeMirror {
   max-width: 100% !important;
-}
-
-root {
-  --ls-tag-text-color: #a4adb4;
-  --ls-tag-text-opacity: .8;
 }
