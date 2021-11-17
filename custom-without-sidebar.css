@@ -1232,6 +1232,26 @@ a.tag[data-ref="reference notes"] {
 
 /* type: tag, page, both */
 a[data-ref=inbox] {
+  margin-right: 1em;
+}
+
+a[data-ref="mit 3"] {
+  margin-right: 1em;
+}
+
+a[data-ref="daily reading"] {
+  margin-right: 1em;
+}
+
+a[data-ref=tasks] {
+  margin-right: 1em;
+}
+
+a[data-ref="daily log"] {
+  margin-right: 1em;
+}
+
+a[data-ref=inbox] {
   border-color: "" !important;
   background: "" !important;
   color: "" !important;

@@ -54,6 +54,13 @@
         }
     }
     
+    $margin_refs: ('inbox', 'mit 3', 'daily reading', 'tasks', 'daily log');
+    @each $margin_ref in $margin_refs {
+        a[data-ref="#{$margin_ref}"] {
+            margin-right: 1.5em;
+        }
+    }
+    
     @include ref-style('inbox', false, false, "📥", 'both');
     @include ref-style('mit 3', false, false, "⭐", 'both');
     @include ref-style('daily reading', false, false, "📖", 'both');
