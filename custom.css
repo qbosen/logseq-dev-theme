@@ -1292,23 +1292,23 @@ a.tag[data-ref="reference notes"] {
 
 /* type: tag, page, both */
 a[data-ref=inbox] {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 a[data-ref="mit 3"] {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 a[data-ref="daily reading"] {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 a[data-ref=tasks] {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 a[data-ref="daily log"] {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 a[data-ref=inbox] {
@@ -1521,7 +1521,7 @@ a.tag[data-ref=quote]::before {
   display: inline-block;
 }
 
-a.tag[data-ref="logseq skill"] {
+a.tag[data-ref=summary] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
@@ -1532,11 +1532,11 @@ a.tag[data-ref="logseq skill"] {
   line-height: 1.4;
   font-size: 0.8em;
 }
-a.tag[data-ref="logseq skill"]:hover {
+a.tag[data-ref=summary]:hover {
   background: #90eaa7 !important;
   border-color: #90eaa7 !important;
 }
-a.tag[data-ref="logseq skill"]::before {
+a.tag[data-ref=summary]::before {
   content: "💡 ";
   display: inline-block;
 }
