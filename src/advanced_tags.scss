@@ -69,6 +69,7 @@
     @include ref-style('project', true, true, "🎯", 'tag', #b6fff5, #000);
     @include ref-style('project', true, false, "🎯", 'page');
     @include ref-style('resource', true, false, "🗂️", 'both');
+    @include ref-style('area', true, false, "🌏", 'both');
     @include ref-style('fitiness', true, true, "🏋️", 'tag', #87c843, #000);
     @include ref-style('example', false, true, "🔎", 'tag', #41e5eb, #000);
     @include ref-style('question', false, true, "❓", 'tag', #FFB6C1, #000);

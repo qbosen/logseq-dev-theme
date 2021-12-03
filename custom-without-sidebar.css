@@ -1341,6 +1341,16 @@ a[data-ref^=resource]::before {
   display: inline-block;
 }
 
+a[data-ref^=area] {
+  border-color: "" !important;
+  background: "" !important;
+  color: "" !important;
+}
+a[data-ref^=area]::before {
+  content: "🌏 ";
+  display: inline-block;
+}
+
 a.tag[data-ref^=fitiness] {
   border-color: #87c843 !important;
   background: #87c843 !important;
@@ -1485,4 +1495,23 @@ a.tag[data-ref=summary]::before {
 /* 宽屏模式下 代码也变宽 */
 .extensions__code > .CodeMirror {
   max-width: 100% !important;
+}
+
+table.mytable {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.mytable td {
+  text-align: center;
+  vertical-align: middle;
+  border-color: #e9ecef;
+  border-style: solid;
+  border-width: 1px;
+}
+table.mytable th {
+  text-align: center;
+  vertical-align: middle;
+  border-color: #e9ecef;
+  border-style: solid;
+  border-width: 1px;
 }
