@@ -1251,6 +1251,26 @@ a[data-ref="daily log"] {
   margin-right: 1.5em;
 }
 
+a[data-ref="fleeting notes"] {
+  margin-right: 1.5em;
+}
+
+a[data-ref="literature notes"] {
+  margin-right: 1.5em;
+}
+
+a[data-ref="permanent notes"] {
+  margin-right: 1.5em;
+}
+
+a[data-ref="relevant notes"] {
+  margin-right: 1.5em;
+}
+
+a[data-ref="reference notes"] {
+  margin-right: 1.5em;
+}
+
 a[data-ref=inbox] {
   border-color: "" !important;
   background: "" !important;

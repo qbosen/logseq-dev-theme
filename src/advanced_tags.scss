@@ -54,7 +54,9 @@
         }
     }
     
-    $margin_refs: ('inbox', 'mit 3', 'daily reading', 'tasks', 'daily log');
+    $margin_refs: ('inbox', 'mit 3', 'daily reading', 'tasks', 'daily log', // journals
+    "fleeting notes", "literature notes", "permanent notes", "relevant notes", "reference notes" //zettelkasten
+    );
     @each $margin_ref in $margin_refs {
         a[data-ref="#{$margin_ref}"] {
             margin-right: 1.5em;
