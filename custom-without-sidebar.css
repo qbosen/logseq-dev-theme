@@ -1471,26 +1471,6 @@ a.tag[data-ref=quotes]::before {
   display: inline-block;
 }
 
-a.tag[data-ref=quote] {
-  border-color: #83ea9e !important;
-  background: #83ea9e !important;
-  color: #000 !important;
-  border: 2px solid #83ea9e;
-  padding: 0 4px;
-  border-radius: 4px;
-  font-weight: 600;
-  line-height: 1.4;
-  font-size: 0.8em;
-}
-a.tag[data-ref=quote]:hover {
-  background: #90eaa7 !important;
-  border-color: #90eaa7 !important;
-}
-a.tag[data-ref=quote]::before {
-  content: " ";
-  display: inline-block;
-}
-
 a.tag[data-ref=summary] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
