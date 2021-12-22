@@ -1491,6 +1491,26 @@ a.tag[data-ref=question]::before {
   display: inline-block;
 }
 
+a.tag[data-ref=answer] {
+  border-color: #b6ffb6 !important;
+  background: #b6ffb6 !important;
+  color: #000 !important;
+  border: 2px solid #b6ffb6;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+a.tag[data-ref=answer]:hover {
+  background: #c3ffc3 !important;
+  border-color: #c3ffc3 !important;
+}
+a.tag[data-ref=answer]::before {
+  content: "✋ ";
+  display: inline-block;
+}
+
 a.tag[data-ref^=recommend] {
   border-color: #f37777 !important;
   background: #f37777 !important;

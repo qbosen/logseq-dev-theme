@@ -75,6 +75,7 @@
     @include ref-style('fitiness', true, true, "🏋️", 'tag', #87c843, #000);
     @include ref-style('example', false, true, "🔎", 'tag', #41e5eb, #000);
     @include ref-style('question', false, true, "❓", 'tag', #FFB6C1, #000);
+    @include ref-style('answer', false, true, "✋", 'tag', #b6ffb6, #000);
     @include ref-style('recommend', true, true, "❤️", 'tag', #f37777, #000);
     @include ref-style('quotes', false, true, "📎", 'tag', #83ea9e, #000);
     // @include ref-style('quote', false, true, "", 'tag', #83ea9e, #000);
