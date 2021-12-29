@@ -1,3 +1,30 @@
+# [1.2.0](https://github.com/qbosen/logseq-dev-theme/compare/v1.1.1...v1.2.0) (2021-12-29)
+
+
+### Bug Fixes
+
+* [#24](https://github.com/qbosen/logseq-dev-theme/issues/24) not be able to scroll horizontally ([b093433](https://github.com/qbosen/logseq-dev-theme/commit/b0934330168cfc1d7783d6a52b355ec9107c9920))
+* adapt for new block toggle styles ([1427d05](https://github.com/qbosen/logseq-dev-theme/commit/1427d05ad957b98cdec89325ee125a7d99c6657a))
+* adjust priority marker positioning ([1b22af3](https://github.com/qbosen/logseq-dev-theme/commit/1b22af3c659ff2ee4951b4ba522313482cadccc2))
+* block toggle rounded border ([60b3783](https://github.com/qbosen/logseq-dev-theme/commit/60b3783971d64437fe15baf6e7165e40a337bae4))
+* block-ref issue in logseq ([6d9b49f](https://github.com/qbosen/logseq-dev-theme/commit/6d9b49fb254501ac320a00316ea685d416d1230e))
+* bullet positioning ([fd8ad71](https://github.com/qbosen/logseq-dev-theme/commit/fd8ad718f98c29d42b1097c5ea8624beb792e122))
+* calc & lang indicator styles ([6d78f4b](https://github.com/qbosen/logseq-dev-theme/commit/6d78f4b799419c0ff1de6079769e646b170f0085))
+* heading & block ref changes ([abc31e3](https://github.com/qbosen/logseq-dev-theme/commit/abc31e36b21855d74cd7be5721f841d091b817cc))
+* italic fonts ([67105a3](https://github.com/qbosen/logseq-dev-theme/commit/67105a34855ca36b2ef5089ed26299c7dae3b8a3))
+* scrolling issue in 0.4.6 ([ca0934d](https://github.com/qbosen/logseq-dev-theme/commit/ca0934d455c8673c29fd3652a28615e67b42e432))
+* smaller code mirror font-size ([ce5925e](https://github.com/qbosen/logseq-dev-theme/commit/ce5925e01314f205acac1e6ba3bf2073cc4526be))
+* strong elements should inherit their color ([a7a3778](https://github.com/qbosen/logseq-dev-theme/commit/a7a3778f52d5ac6d2428744b858b09fa617621cd))
+* threading styles regression for 0.4.6 ([a997d7e](https://github.com/qbosen/logseq-dev-theme/commit/a997d7e66069c2f2f710d64990e73928c0bce1af))
+* update colors ([291a4ac](https://github.com/qbosen/logseq-dev-theme/commit/291a4ac9904d282c3abc65758e971b150bbd622f))
+* update dark mode selection color ([0d9b59b](https://github.com/qbosen/logseq-dev-theme/commit/0d9b59b866427205f7aa07ece1ff32329ed4e207))
+
+
+### Features
+
+* sticky journal titles ([82a7343](https://github.com/qbosen/logseq-dev-theme/commit/82a73430955e218e4a35e5dc530e9414682bca46))
+* update block-ref style ([6c177a3](https://github.com/qbosen/logseq-dev-theme/commit/6c177a3c36df5302200b2be8ff7d97aa5cac67d0))
+
 ## [1.1.1](https://github.com/qbosen/logseq-dev-theme/compare/v1.1.0...v1.1.1) (2021-11-03)
 
 
