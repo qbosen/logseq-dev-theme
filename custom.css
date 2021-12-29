@@ -37,6 +37,10 @@ textarea {
   line-height: var(--ct-line-height);
 }
 
+i {
+  font-family: "Only Emoji", "Source Sans 3 VF", sans-serif;
+}
+
 :root {
   --ct-background: var(--ls-primary-background-color);
   --ct-page-font-color: var(--ls-primary-text-color);
@@ -96,6 +100,10 @@ textarea {
   box-shadow: 0 0 0 2px var(--color-level-2);
 }
 
+.scrollbar-spacing {
+  height: 100%;
+}
+
 :root {
   --ct-sidebar-resizer-background: var(--ls-secondary-background-color);
   --ct-sidebar-resizer-background-hover: var(--ct-primary-color);
@@ -105,7 +113,6 @@ textarea {
   padding-top: var(--ct-header-height);
   position: absolute;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .theme-inner {
@@ -206,6 +213,16 @@ textarea {
 .left-sidebar-inner .nav-content-item {
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+#journals > div > div > div > div.flex.flex-col > div.content {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
+#journals > div > div > div > div.flex.flex-col > div.content .journal-title > h1 {
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
 }
 
 :root {
@@ -309,7 +326,26 @@ a.title h1.title {
 
 .ls-block :is(h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5) {
   font-family: var(--ct-page-title-font-family);
+}
+
+.ls-block :is(h1, h2, .h1, .h2) {
   font-weight: var(--ct-page-title-font-weight);
+}
+
+.ls-block :is(h3, h4) {
+  margin: 0.3em 0 0;
+}
+
+.ls-block :is(h3, h4, .h3, .h4) {
+  font-weight: 400;
+}
+
+.ls-block :is(h4, .h4) {
+  opacity: 0.8;
+}
+
+.ls-block :is(h5, .h5):not(textarea) {
+  transform: translateY(-8px);
 }
 
 .ls-block .block-ref :is(h1, h2, h3, h4, h5) {
@@ -353,10 +389,6 @@ a.title h1.title {
   content: "h5";
 }
 
-.ls-block :is(h3, h4, h5) {
-  margin: 0.3em 0 0;
-}
-
 :root {
   --ls-block-bullet-active-color: var(--ls-link-text-color);
   --ls-block-bullet-threading-width: 1px;
@@ -367,7 +399,28 @@ a.title h1.title {
 }
 
 .block-children {
+  border-left-color: var(--ls-guideline-color);
   border-left-width: var(--ls-block-bullet-threading-width);
+}
+
+.block-children-container {
+  position: relative;
+}
+
+.block-children-left-border {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  padding-right: 0px;
+  border-radius: 2px;
+  background-color: transparent;
+  left: -1px;
+  transition: background-color 0.2s;
+}
+
+.block-children-left-border:hover {
+  background-color: var(--ls-block-bullet-active-color);
 }
 
 .block-content-wrapper {
@@ -378,6 +431,7 @@ a.title h1.title {
   height: 14px !important;
   width: 14px !important;
   position: relative;
+  transform: translate(1px, -1px);
 }
 
 /* Block bullet path should only show in a nested block */
@@ -476,6 +530,10 @@ a.title h1.title {
 .block-ref:before {
   color: var(--ls-active-primary-color);
   font-size: 0.8em;
+  display: inline;
+  font-size: inherit;
+  border-bottom-color: var(--ct-primary-color);
+  border-bottom-style: dashed;
 }
 
 .block-ref .block-body {
@@ -489,6 +547,11 @@ a.title h1.title {
 
 .block-ref .block-ref {
   padding: 0 0 0 0.2em;
+  display: inline;
+}
+
+.block-ref .flex.flex-row.justify-between {
+  display: inline;
 }
 
 .open-block-ref-link {
@@ -521,7 +584,7 @@ a:hover > .bullet-container .bullet {
 }
 
 .block-control .rotating-arrow {
-  display: inline-block;
+  display: block;
   border-radius: 50%;
   background-color: var(--ls-primary-background-color);
   width: 1rem;
@@ -660,6 +723,10 @@ strong {
   font-weight: 600;
 }
 
+.with-bg-color :is(b, strong) {
+  color: inherit;
+}
+
 /* External links */
 .external-link,
 .external-link:hover {
@@ -768,6 +835,50 @@ progress::-webkit-progress-value {
 
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
   background: var(--ls-tertiary-background-color) !important;
+}
+
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cm-s-solarized div.CodeMirror-selected {
+  background: var(--ct-primary-color);
+  color: var(--ls-selection-color);
+}
+
+.CodeMirror {
+  background-color: var(--color-level-1);
+  box-shadow: 0 0 0 2px var(--color-level-2);
+}
+
+.cm-s-solarized div.CodeMirror-selected {
+  background: var(--color-level-4) !important;
+}
+
+.extensions__code > .CodeMirror {
+  padding-top: 0;
+}
+
+.extensions__code-calc {
+  top: 8px;
+}
+
+.extensions__code-calc-output-line {
+  height: 16px;
+  font-size: 12px;
+}
+
+.extensions__code-lang {
+  margin-left: 4px;
+  height: 28px;
+  border-radius: 4px;
 }
 
 /* Popups */
@@ -905,7 +1016,7 @@ progress::-webkit-progress-value {
 :root {
   --ct-marker-border-radius: 4px;
   --ct-task-done-text-decoration: none;
-  --ct-marker-size: 20px;
+  --ct-marker-size: 16px;
   --ct-checkbox-color: var(--ls-active-primary-color);
 }
 
@@ -915,9 +1026,8 @@ progress::-webkit-progress-value {
   border-radius: var(--ct-marker-border-radius);
   border: 2px solid var(--ct-checkbox-color) !important;
   background-color: transparent !important;
-  height: calc(var(--ct-marker-size) - 4px);
-  width: calc(var(--ct-marker-size) - 4px);
-  margin-top: -3px !important;
+  height: var(--ct-marker-size);
+  width: var(--ct-marker-size);
 }
 
 :is(.doing, .now) .form-checkbox,
@@ -973,18 +1083,17 @@ a.priority[href="#/page/A" i],
 [href="#/page/C" i] {
   display: inline-flex;
   opacity: 1 !important;
-  height: var(--ct-marker-size);
-  width: var(--ct-marker-size);
 }
 
 a[priority]::before,
 a.priority::before {
+  transform: translateY(-1px);
   border: 1px solid #eee;
   border-radius: var(--ct-marker-border-radius);
   font-size: 12px;
   font-weight: 600;
-  height: var(--ct-marker-size);
-  width: var(--ct-marker-size);
+  height: calc(var(--ct-marker-size) + 4px);
+  width: calc(var(--ct-marker-size) + 4px);
   line-height: 1.5;
   text-align: center;
   display: inline-flex;
@@ -1037,10 +1146,16 @@ html[data-theme=dark] {
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
   --ct-highlight-color: #ffc600;
-  --ls-primary-background-color: #272c35;
-  --ls-secondary-background-color: #313942;
-  --ls-tertiary-background-color: #38434c;
-  --ls-quaternary-background-color: #404b55;
+  --color-level-1: #272c35;
+  --color-level-2: #313942;
+  --color-level-3: #38434c;
+  --color-level-4: #404b55;
+  --color-level-5: #525f6b;
+  --color-level-6: #606e7a;
+  --ls-primary-background-color: var(--color-level-1);
+  --ls-secondary-background-color: var(--color-level-2);
+  --ls-tertiary-background-color: var(--color-level-3);
+  --ls-quaternary-background-color: var(--color-level-4);
   --ls-border-color: var(--ls-tertiary-background-color);
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
   --ls-primary-text-color: rgb(235, 235, 235);
@@ -1059,15 +1174,14 @@ html[data-theme=dark] {
   --ct-block-arrow-color: rgb(165, 165, 165);
   --ct-page-reference-color: var(--ls-active-primary-color);
   --ls-icon-color: var(--ls-primary-text-color);
-  --ct-block-reference-background: rgba(0, 0, 0, 0);
-  --ct-block-reference-background-hover: rgba(0, 0, 0, 0);
+  --ct-block-reference-background: rgba(16, 107, 163, 0.2);
+  --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
-  --ls-tag-text-color: #a4adb4;
-  --ls-tag-text-opacity: .8;
+  --ls-block-highlight-color: var(--color-level-1);
 }
 
 .dark-theme .image-resize {
@@ -1081,14 +1195,18 @@ html[data-theme=light] {
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
   --ct-highlight-color: #ffc600;
+  --color-level-1: #f1f5f9;
+  --color-level-2: #e2e8f0;
+  --color-level-3: #cbd5e1;
+  --color-level-4: #b9c1ca;
+  --color-level-5: #aeb5bd;
+  --color-level-6: #969ca5;
   --ls-primary-background-color: #ffffff;
   --ls-secondary-background-color: #f8f9fa;
   --ls-tertiary-background-color: #e9ecef;
   --ls-quaternary-background-color: #dee2e6;
   --ls-border-color: var(--ls-tertiary-background-color);
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
-  --color-level-4: #ced4da;
-  --color-level-5: #adb5bd;
   --ls-primary-text-color: rgb(40, 40, 40);
   --ls-secondary-text-color: #161e2e;
   --ct-bold-color: #000;

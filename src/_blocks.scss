@@ -23,6 +23,10 @@
     color: var(--ls-active-primary-color);
     font-size: 0.8em;
     // padding: 0 4px 0 0;
+    display: inline;
+    font-size: inherit;
+    border-bottom-color: var(--ct-primary-color);
+    border-bottom-style: dashed;
 }
 
 .block-ref .block-body {
@@ -36,6 +40,11 @@
 
 .block-ref .block-ref {
     padding: 0 0 0 0.2em;
+    display: inline;
+}
+
+.block-ref .flex.flex-row.justify-between {
+    display: inline;
 }
 
 .open-block-ref-link {
@@ -68,7 +77,7 @@ a:hover>.bullet-container .bullet {
 }
 
 .block-control .rotating-arrow {
-    display: inline-block;
+    display: block;
     border-radius: 50%;
     background-color: var(--ls-primary-background-color);
     width: 1rem;
