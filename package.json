@@ -4,8 +4,7 @@
     "version": "1.2.0",
     "description": "A custom theme for dev",
     "logseq": {
-        "themes": [
-            {
+        "themes": [{
                 "name": "Dev theme",
                 "url": "./custom.css",
                 "description": "A custom theme for dev"
@@ -21,7 +20,7 @@
     },
     "scripts": {
         "build:main": "yarn sass src/main.scss main.css --no-source-map",
-        "build:cust": "yarn sass src/custom.scss custom.css --no-source-map && yarn sass src/custom-without-sidebar.scss custom-without-sidebar.css --no-source-map",
+        "build:cust": "yarn sass src/custom.scss custom.css --no-source-map && yarn sass src/custom-single-sidebar.scss custom-single-sidebar.css --no-source-map",
         "build:hl": "yarn sass src/highlights.scss highlights.css --no-source-map",
         "build:sb": "yarn sass src/sidebar.scss sidebar.css --no-source-map",
         "build:zt": "yarn sass src/zettelkasten.scss zettelkasten.css --no-source-map",
