@@ -27,3 +27,29 @@ table.mytable {
         border-width: 1px;
     }
 }
+
+/*ios 展开交互开始*/
+html.is-ios .block-control {
+  position: absolute;
+  right: 0px;
+  margin-right: -14px;
+}
+
+html.is-ios div[haschild=true] > div > div > .block-control .control-hide, .block-control:hover .control-hide {
+  display: block;
+}
+
+html.is-ios div[haschild=true] > div > div > .block-control svg[aria-hidden=true] {
+  width: 24px;
+  height: 24px;
+}
+
+html.is-ios div[haschild=true] > div > div > .block-control .collapsed svg[aria-hidden=true] {
+  transform: rotate(180deg);
+}
+
+html.is-ios .page-blocks-inner {
+  padding-left: 10px;
+  padding-right: 4px;
+}
+/*ios 展开交互结束*/
