@@ -1715,7 +1715,7 @@ table.mytable th {
 }
 
 /*ios 展开交互开始*/
-html.is-ios .block-control {
+/* html.is-ios .block-control {
   position: absolute;
   right: 0px;
   margin-right: -14px;
@@ -1737,6 +1737,5 @@ html.is-ios div[haschild=true] > div > div > .block-control .collapsed svg[aria-
 html.is-ios .page-blocks-inner {
   padding-left: 10px;
   padding-right: 4px;
-}
-
+} */
 /*ios 展开交互结束*/
