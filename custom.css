@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 直接替换整个custom.css, 使用文件方式导入的css文件不能及时更新 */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+@import url("https://codemirror.net/theme/dracula.css");
 /* 思源字体不支持中文斜体 */
 /* @font-face {
     font-family: "Source Han Sans VF";
@@ -21,7 +22,7 @@
   --ct-line-height: 1.6;
   --ls-font-family: "Only Emoji", "system-ui", sans-serif;
   --ct-page-title-font-family: var(--ls-font-family);
-  --ct-code-font-family: "JetBrains Mono", monospace;
+  --ct-code-font-family: "Fira Code", monospace;
 }
 
 html,

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 直接替换整个custom.css, 使用文件方式导入的css文件不能及时更新 */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+@import url("https://codemirror.net/theme/dracula.css");
 /* 思源字体不支持中文斜体 */
 /* @font-face {
     font-family: "Source Han Sans VF";
@@ -21,7 +22,7 @@
   --ct-line-height: 1.6;
   --ls-font-family: "Only Emoji", "system-ui", sans-serif;
   --ct-page-title-font-family: var(--ls-font-family);
-  --ct-code-font-family: "JetBrains Mono", monospace;
+  --ct-code-font-family: "Fira Code", monospace;
 }
 
 html,
@@ -391,7 +392,7 @@ a.title h1.title {
 
 :root {
   --ls-block-bullet-active-color: var(--ls-link-text-color);
-  --ls-block-bullet-threading-width: 1px;
+  --ls-block-bullet-threading-width: var(--ls-block-bullet-threading-width-overwrite, 1px);
 }
 
 .block-control {
@@ -400,7 +401,7 @@ a.title h1.title {
 
 .block-children {
   border-left-color: var(--ls-guideline-color);
-  border-left-width: var(--ls-block-bullet-threading-width);
+  border-left-width: var(--ls-block-bullet-threading-width) !important;
 }
 
 .block-children-container {
@@ -408,7 +409,7 @@ a.title h1.title {
 }
 
 .block-children-left-border {
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   height: 100%;
   width: 4px;
@@ -877,7 +878,7 @@ progress::-webkit-progress-value {
 
 .extensions__code-lang {
   margin-left: 4px;
-  height: 28px;
+  height: 26px;
   border-radius: 4px;
 }
 
@@ -1146,16 +1147,16 @@ html[data-theme=dark] {
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
   --ct-highlight-color: #ffc600;
-  --color-level-1: #272c35;
-  --color-level-2: #313942;
-  --color-level-3: #38434c;
-  --color-level-4: #404b55;
-  --color-level-5: #525f6b;
-  --color-level-6: #606e7a;
-  --ls-primary-background-color: var(--color-level-1);
-  --ls-secondary-background-color: var(--color-level-2);
-  --ls-tertiary-background-color: var(--color-level-3);
-  --ls-quaternary-background-color: var(--color-level-4);
+  --color-level-1: #313942;
+  --color-level-2: #38434c;
+  --color-level-3: #404b55;
+  --color-level-4: #525f6b;
+  --color-level-5: #606e7a;
+  --color-level-6: #697885;
+  --ls-primary-background-color: #272c35;
+  --ls-secondary-background-color: var(--color-level-1);
+  --ls-tertiary-background-color: var(--color-level-2);
+  --ls-quaternary-background-color: var(--color-level-3);
   --ls-border-color: var(--ls-tertiary-background-color);
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
   --ls-primary-text-color: rgb(235, 235, 235);
@@ -1181,7 +1182,7 @@ html[data-theme=dark] {
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
-  --ls-block-highlight-color: var(--color-level-1);
+  --ls-block-highlight-color: #32445a;
 }
 
 .dark-theme .image-resize {
@@ -1195,16 +1196,16 @@ html[data-theme=light] {
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
   --ct-highlight-color: #ffc600;
-  --color-level-1: #f1f5f9;
-  --color-level-2: #e2e8f0;
-  --color-level-3: #cbd5e1;
-  --color-level-4: #b9c1ca;
-  --color-level-5: #aeb5bd;
-  --color-level-6: #969ca5;
+  --color-level-1: #f8f9fa;
+  --color-level-2: #e9ecef;
+  --color-level-3: #dee2e6;
+  --color-level-4: #b9bcbe;
+  --color-level-5: #aaaeb4;
+  --color-level-6: #9da2a8;
   --ls-primary-background-color: #ffffff;
-  --ls-secondary-background-color: #f8f9fa;
-  --ls-tertiary-background-color: #e9ecef;
-  --ls-quaternary-background-color: #dee2e6;
+  --ls-secondary-background-color: var(--color-level-1);
+  --ls-tertiary-background-color: var(--color-level-2);
+  --ls-quaternary-background-color: var(--color-level-3);
   --ls-border-color: var(--ls-tertiary-background-color);
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
   --ls-primary-text-color: rgb(40, 40, 40);
