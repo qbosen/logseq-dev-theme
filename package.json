@@ -1,10 +1,11 @@
 {
     "name": "logseq-dev-theme",
     "author": "qbosen",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "A custom theme for dev",
     "logseq": {
-        "themes": [{
+        "themes": [
+            {
                 "name": "Dev theme",
                 "url": "./custom.css",
                 "description": "A custom theme for dev"

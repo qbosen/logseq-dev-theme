@@ -1,3 +1,15 @@
+## [1.2.1](https://github.com/qbosen/logseq-dev-theme/compare/v1.2.0...v1.2.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* compatibility issue with other themes ([978ddf7](https://github.com/qbosen/logseq-dev-theme/commit/978ddf7a9d606169446462eb2780c697abc6fe08))
+* incorrect color theme ([91f8b37](https://github.com/qbosen/logseq-dev-theme/commit/91f8b37a0ac0be9594627fb0780b2aaf2f99eb88))
+* lower block toggle bar ([5245dbe](https://github.com/qbosen/logseq-dev-theme/commit/5245dbe431d0f96f536c3730ac04c5bd4bf0ba72))
+* prepare for standalone plugin ([ae0a327](https://github.com/qbosen/logseq-dev-theme/commit/ae0a327584e2470b4aaaae26fb3eda37530cfe65))
+* remove the margin of code ([d388875](https://github.com/qbosen/logseq-dev-theme/commit/d38887510c87834ac77e64ed5ad7b5bed513c8d5))
+* some style issues ([0b4d669](https://github.com/qbosen/logseq-dev-theme/commit/0b4d669335354f4cae699acb6343d0840233e89f))
+
 # [1.2.0](https://github.com/qbosen/logseq-dev-theme/compare/v1.1.1...v1.2.0) (2021-12-29)
 
 
