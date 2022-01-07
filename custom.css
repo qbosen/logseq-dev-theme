@@ -519,18 +519,6 @@ a.title h1.title {
 
 /* block reference */
 .block-ref {
-  font-size: inherit;
-  border-radius: 2px;
-  background: var(--ct-block-reference-background);
-}
-
-.block-ref:hover {
-  background: var(--ct-block-reference-background-hover);
-}
-
-.block-ref:before {
-  color: var(--ls-active-primary-color);
-  font-size: 0.8em;
   display: inline;
   font-size: inherit;
   border-bottom-color: var(--ct-primary-color);
@@ -543,16 +531,15 @@ a.title h1.title {
 
 .block-ref div {
   display: inline;
-  padding: 0 0.2em;
-}
-
-.block-ref .block-ref {
-  padding: 0 0 0 0.2em;
-  display: inline;
 }
 
 .block-ref .flex.flex-row.justify-between {
   display: inline;
+}
+
+.block-ref .block-ref {
+  display: inline;
+  padding: 0 0 0 0.2em;
 }
 
 .open-block-ref-link {
