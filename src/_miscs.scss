@@ -81,15 +81,14 @@ pre {
 
 /* inline code */
 
-:not(pre)>code {
-    font-family: var(--ct-code-font-family);
-    font-size: var(--ct-inline-code-font-size);
-    font-style: var(--ct-inline-code-font-style) !important;
-    border-radius: var(--ct-inline-code-border-radius);
-    padding: var(--ct-inline-code-padding) !important;
-    background: var(--ls-tertiary-background-color);
-    color: var(--ct-inline-code-color);
-    margin-right: 2px;
+:not(pre) > code {
+  font-family: var(--ct-code-font-family);
+  font-size: var(--ct-inline-code-font-size);
+  font-style: var(--ct-inline-code-font-style) !important;
+  border-radius: var(--ct-inline-code-border-radius);
+  padding: var(--ct-inline-code-padding) !important;
+  background: var(--ls-tertiary-background-color);
+  color: var(--ct-inline-code-color);
 }
 
 
