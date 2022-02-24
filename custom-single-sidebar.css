@@ -1617,6 +1617,12 @@ a.tag[data-ref=summary]::before {
 }
 
 /* 个人适配使用 */
+/* 评论系统宽度 */
+.giscus .giscus-frame {
+  margin: 0 max(10%, 250px) 0 max(10%, 250px);
+  width: calc(100% - 2 * max(10%, 250px));
+}
+
 /* 宽屏模式下 代码也变宽 */
 .extensions__code > .CodeMirror {
   max-width: 100% !important;

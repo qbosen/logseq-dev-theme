@@ -1,6 +1,14 @@
 /* 个人适配使用 */
 
 
+/* 评论系统宽度 */
+
+.giscus .giscus-frame {
+    margin: 0 max(10%, 250px) 0 max(10%, 250px);
+    width: calc(100% - 2 * max(10%, 250px));
+}
+
+
 /* 宽屏模式下 代码也变宽 */
 
 .extensions__code>.CodeMirror {
@@ -10,14 +18,12 @@
 table.mytable {
     border-collapse: collapse;
     border-spacing: 0;
-
     td {
         text-align: center;
         vertical-align: middle;
         border-color: #e9ecef;
         border-style: solid;
         border-width: 1px;
-     
     }
     th {
         text-align: center;
@@ -28,7 +34,10 @@ table.mytable {
     }
 }
 
+
 /*ios 展开交互开始*/
+
+
 /* html.is-ios .block-control {
   position: absolute;
   right: 0px;
@@ -52,4 +61,6 @@ html.is-ios .page-blocks-inner {
   padding-left: 10px;
   padding-right: 4px;
 } */
+
+
 /*ios 展开交互结束*/
