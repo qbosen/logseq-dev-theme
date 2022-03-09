@@ -1253,6 +1253,141 @@ mark.purple {
   text-decoration-color: #d2b3ff;
 }
 
+span[data-ref="#yellow"] {
+  display: none;
+}
+span[data-ref="#yellow"] + mark {
+  text-decoration-color: #fff3a3;
+}
+
+span[data-ref="$yellow"] {
+  display: none;
+}
+span[data-ref="$yellow"] + mark {
+  color: #fff3a3;
+  text-decoration: unset;
+}
+
+span[data-ref="#pink"] {
+  display: none;
+}
+span[data-ref="#pink"] + mark {
+  text-decoration-color: #f2b3cf;
+}
+
+span[data-ref="$pink"] {
+  display: none;
+}
+span[data-ref="$pink"] + mark {
+  color: #f2b3cf;
+  text-decoration: unset;
+}
+
+span[data-ref="#blue"] {
+  display: none;
+}
+span[data-ref="#blue"] + mark {
+  text-decoration-color: #b5d3ff;
+}
+
+span[data-ref="$blue"] {
+  display: none;
+}
+span[data-ref="$blue"] + mark {
+  color: #b5d3ff;
+  text-decoration: unset;
+}
+
+span[data-ref="#green"] {
+  display: none;
+}
+span[data-ref="#green"] + mark {
+  text-decoration-color: #bbfabb;
+}
+
+span[data-ref="$green"] {
+  display: none;
+}
+span[data-ref="$green"] + mark {
+  color: #bbfabb;
+  text-decoration: unset;
+}
+
+span[data-ref="#red"] {
+  display: none;
+}
+span[data-ref="#red"] + mark {
+  text-decoration-color: #ff5582;
+}
+
+span[data-ref="$red"] {
+  display: none;
+}
+span[data-ref="$red"] + mark {
+  color: #ff5582;
+  text-decoration: unset;
+}
+
+span[data-ref="#grey"] {
+  display: none;
+}
+span[data-ref="#grey"] + mark {
+  text-decoration-color: #cacfd9;
+}
+
+span[data-ref="$grey"] {
+  display: none;
+}
+span[data-ref="$grey"] + mark {
+  color: #cacfd9;
+  text-decoration: unset;
+}
+
+span[data-ref="#gray"] {
+  display: none;
+}
+span[data-ref="#gray"] + mark {
+  text-decoration-color: #cacfd9;
+}
+
+span[data-ref="$gray"] {
+  display: none;
+}
+span[data-ref="$gray"] + mark {
+  color: #cacfd9;
+  text-decoration: unset;
+}
+
+span[data-ref="#orange"] {
+  display: none;
+}
+span[data-ref="#orange"] + mark {
+  text-decoration-color: #ffb86c;
+}
+
+span[data-ref="$orange"] {
+  display: none;
+}
+span[data-ref="$orange"] + mark {
+  color: #ffb86c;
+  text-decoration: unset;
+}
+
+span[data-ref="#purple"] {
+  display: none;
+}
+span[data-ref="#purple"] + mark {
+  text-decoration-color: #d2b3ff;
+}
+
+span[data-ref="$purple"] {
+  display: none;
+}
+span[data-ref="$purple"] + mark {
+  color: #d2b3ff;
+  text-decoration: unset;
+}
+
 /* 多列侧边栏 */
 /* https://discord.com/channels/725182569297215569/752845138148982877/885123354359631942 */
 :root {
@@ -1678,9 +1813,12 @@ a.tag[data-ref=summary]::before {
 
 /* 个人适配使用 */
 /* 评论系统宽度 */
+/* .giscus .giscus-frame {
+    margin: 0 max(10%, 250px) 0 max(10%, 250px);
+    width: calc(100% - 2 * max(10%, 250px));
+} */
 .giscus .giscus-frame {
-  margin: 0 max(10%, 250px) 0 max(10%, 250px);
-  width: calc(100% - 2 * max(10%, 250px));
+  width: 100%;
 }
 
 /* 宽屏模式下 代码也变宽 */

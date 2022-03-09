@@ -9,12 +9,31 @@ $marks:( // 注释用来防止格式化合并
 'orange':#ffb86c, //
 'purple':#d2b3ff, //
 );
+// class style
 mark {
     text-decoration-color: #ffc600;
     @each $class,
     $color in $marks {
         &.#{$class} {
             text-decoration-color: $color;
+        }
+    }
+}
+
+// data-ref style
+@each $class,
+$color in $marks {
+    span[data-ref="##{$class}"] {
+        display: none;
+        &+mark {
+            text-decoration-color: $color;
+        }
+    }
+    span[data-ref="\$#{$class}"] {
+        display: none;
+        &+mark {
+            color: $color;
+            text-decoration: unset;
         }
     }
 }
