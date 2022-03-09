@@ -4,8 +4,7 @@
     "version": "1.2.1",
     "description": "A custom theme for dev",
     "logseq": {
-        "themes": [
-            {
+        "themes": [{
                 "name": "Dev theme",
                 "url": "./custom.css",
                 "description": "A custom theme for dev"

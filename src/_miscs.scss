@@ -36,8 +36,9 @@ strong {
 
 // strong elements should inherit font colors
 .with-bg-color :is(b, strong) {
-  color: inherit;
+    color: inherit;
 }
+
 
 /* External links */
 
@@ -81,14 +82,14 @@ pre {
 
 /* inline code */
 
-:not(pre) > code {
-  font-family: var(--ct-code-font-family);
-  font-size: var(--ct-inline-code-font-size);
-  font-style: var(--ct-inline-code-font-style) !important;
-  border-radius: var(--ct-inline-code-border-radius);
-  padding: var(--ct-inline-code-padding) !important;
-  background: var(--ls-tertiary-background-color);
-  color: var(--ct-inline-code-color);
+:not(pre)>code {
+    font-family: var(--ct-code-font-family);
+    font-size: var(--ct-inline-code-font-size);
+    font-style: var(--ct-inline-code-font-style) !important;
+    border-radius: var(--ct-inline-code-border-radius);
+    padding: var(--ct-inline-code-padding) !important;
+    background: var(--ls-tertiary-background-color);
+    color: var(--ct-inline-code-color);
 }
 
 
@@ -118,22 +119,31 @@ a.tag:hover {
 }
 
 
+/* Makes texts in bg always readable */
+
+.with-bg-color * {
+    color: white !important;
+    border-color: white !important;
+}
+
+
 /* Page properties */
+
 .page-properties,
 .block-properties {
-  margin: 0 0 0.5em -8px;
-  font-size: 0.8em;
-  background: var(--ls-secondary-background-color);
-  width: fit-content;
-  padding-right: 2rem;
-  max-width: var(--ct-block-max-width);
+    margin: 0 0 0.5em -8px;
+    font-size: 0.8em;
+    background: var(--ls-secondary-background-color);
+    width: fit-content;
+    padding-right: 2rem;
+    max-width: var(--ct-block-max-width);
 }
 
 .sidebar-item-list {
-  .page-properties,
-  .block-properties {
-    background: var(--ls-tertiary-background-color);
-  }
+    .page-properties,
+    .block-properties {
+        background: var(--ls-tertiary-background-color);
+    }
 }
 
 
@@ -161,7 +171,7 @@ progress::-webkit-progress-value {
 }
 
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background: var(--ls-tertiary-background-color) !important;
+    background: var(--ls-tertiary-background-color) !important;
 }
 
 .CodeMirror pre.CodeMirror-line,
@@ -171,39 +181,39 @@ progress::-webkit-progress-value {
 .CodeMirror-scroll,
 .CodeMirror-sizer,
 .CodeMirror {
-  font-size: 12px;
-  line-height: 16px;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .cm-s-solarized div.CodeMirror-selected {
-  background: var(--ct-primary-color);
-  color: var(--ls-selection-color);
+    background: var(--ct-primary-color);
+    color: var(--ls-selection-color);
 }
 
 .CodeMirror {
-  background-color: var(--color-level-1);
-  box-shadow: 0 0 0 2px var(--color-level-2);
+    background-color: var(--color-level-1);
+    box-shadow: 0 0 0 2px var(--color-level-2);
 }
 
 .cm-s-solarized div.CodeMirror-selected {
-  background: var(--color-level-4) !important;
+    background: var(--color-level-4) !important;
 }
 
-.extensions__code > .CodeMirror {
-  padding-top: 0;
+.extensions__code>.CodeMirror {
+    padding-top: 0;
 }
 
 .extensions__code-calc {
-  top: 8px;
+    top: 8px;
 }
 
 .extensions__code-calc-output-line {
-  height: 16px;
-  font-size: 12px;
+    height: 16px;
+    font-size: 12px;
 }
 
 .extensions__code-lang {
-  margin-left: 4px;
-  height: 26px;
-  border-radius: 4px;
+    margin-left: 4px;
+    height: 26px;
+    border-radius: 4px;
 }

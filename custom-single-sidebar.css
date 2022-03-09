@@ -111,7 +111,6 @@ i {
 }
 
 #main-container {
-  padding-top: var(--ct-header-height);
   position: absolute;
   width: 100%;
 }
@@ -211,19 +210,35 @@ i {
   margin-top: 0.5em;
 }
 
+#left-sidebar {
+  height: 100%;
+  padding-top: var(--ct-header-height);
+}
+
+.left-sidebar-inner {
+  height: 100%;
+}
+
+.left-sidebar-inner > .wrap {
+  margin-top: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: calc(100% - var(--ct-header-height));
+}
+
+.left-sidebar-inner a.item > span {
+  transform: translateY(2px);
+  margin-top: 0;
+}
+
+.left-sidebar-inner .new-page {
+  position: absolute;
+  bottom: 0;
+}
+
 .left-sidebar-inner .nav-content-item {
   font-size: 0.875rem;
   font-weight: 500;
-}
-
-#journals > div > div > div > div.flex.flex-col > div.content {
-  position: sticky;
-  top: 50px;
-  z-index: 1;
-}
-#journals > div > div > div > div.flex.flex-col > div.content .journal-title > h1 {
-  backdrop-filter: blur(5px);
-  border-radius: 4px;
 }
 
 :root {
@@ -259,7 +274,6 @@ a.title h1.title {
 
 .ls-block h2 {
   font-family: var(--ct-heading-font-family);
-  font-size: var(--ct-heading-font-size);
   font-weight: var(--ct-heading-font-weight);
   font-style: var(--ct-heading-font-style);
   color: var(--ct-heading-color);
@@ -311,11 +325,7 @@ a.title h1.title {
 }
 
 #repo-name {
-  /* Show the last part of the repo instead */
-  direction: rtl;
-  text-align: left;
-  max-width: 120px;
-  line-height: 1.5;
+  max-width: 150px;
 }
 
 .cp__right-sidebar-settings a {
@@ -504,6 +514,138 @@ a.title h1.title {
   border-color: var(--ls-block-bullet-active-color);
 }
 
+@media (max-width: 640px) {
+  .ls-block[haschild=true] > div > .block-content-wrapper::before {
+    left: -11px;
+  }
+}
+/* Disable for doc mode */
+.doc-mode div.items-center::before,
+.doc-mode div.items-center::after,
+.doc-mode .ls-block::before,
+.doc-mode .ls-block::after {
+  display: none;
+}
+
+:root {
+  --ls-block-bullet-active-color: var(--ls-link-text-color);
+  --ls-block-bullet-threading-width: var(--ls-block-bullet-threading-width-overwrite, 1px);
+}
+
+.block-control {
+  z-index: 1;
+}
+
+.block-children {
+  border-left-color: var(--ls-guideline-color);
+  border-left-width: var(--ls-block-bullet-threading-width) !important;
+}
+
+.block-children-container {
+  position: relative;
+}
+
+.block-children-left-border {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  padding-right: 0px;
+  border-radius: 2px;
+  background-color: transparent;
+  left: -1px;
+  transition: background-color 0.2s;
+}
+
+.block-children-left-border:hover {
+  background-color: var(--ls-block-bullet-active-color);
+}
+
+.block-content-wrapper {
+  position: relative;
+}
+
+.bullet-container {
+  height: 14px !important;
+  width: 14px !important;
+  position: relative;
+  transform: translate(1px, -1px);
+}
+
+/* Block bullet path should only show in a nested block */
+.ls-block {
+  /* Fix for headings like h1, h2 etc */
+  /* Basic "curve" */
+  /* Fix multi-line blocks with children */
+}
+.ls-block .bullet {
+  background-color: var(--ls-block-bullet-active-color);
+  box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
+}
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
+}
+.ls-block > .items-baseline {
+  align-items: initial;
+}
+.ls-block:not(:focus-within) .bullet {
+  background-color: var(--ls-block-bullet-color);
+  transform: scale(1);
+  box-shadow: none;
+}
+.ls-block:not(:focus-within) > .items-baseline {
+  align-items: baseline;
+}
+.ls-block .ls-block > div > div.items-center::before {
+  pointer-events: none;
+  content: "";
+  left: calc(var(--ls-block-bullet-threading-width) * -1);
+  right: 6px;
+  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
+  bottom: 50%;
+  /* shift left 1px for border */
+  position: absolute;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+  border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
+  border-bottom-left-radius: 10px;
+}
+.ls-block .ls-block:focus-within > div > div.items-center::before {
+  border-color: var(--ls-block-bullet-active-color);
+}
+.ls-block .block-children > .ls-block::before {
+  pointer-events: none;
+  content: "";
+  top: -1rem;
+  bottom: 0;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+  left: calc(var(--ls-block-bullet-threading-width) * -1);
+  position: absolute;
+}
+.ls-block .block-children:focus-within > .ls-block:not(:focus-within)::before {
+  border-color: var(--ls-block-bullet-active-color);
+}
+.ls-block .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
+  border-color: transparent;
+}
+.ls-block[haschild=true] > div > .block-content-wrapper::before {
+  pointer-events: none;
+  content: "";
+  top: 12px;
+  bottom: 0;
+  left: -15px;
+  position: absolute;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+}
+.ls-block[haschild=true]:focus-within > div > .block-content-wrapper::before {
+  border-color: var(--ls-block-bullet-active-color);
+}
+
+@media (max-width: 640px) {
+  .ls-block[haschild=true] > div > .block-content-wrapper::before {
+    left: -11px;
+  }
+}
 /* Disable for doc mode */
 .doc-mode div.items-center::before,
 .doc-mode div.items-center::after,
@@ -584,6 +726,11 @@ a:hover > .bullet-container .bullet {
 
 .block-control .rotating-arrow > svg {
   margin-left: 0 !important;
+}
+
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
 }
 
 .block-content-wrapper > div > .block-content > span > span > :first-child {
@@ -780,6 +927,12 @@ a.tag:hover {
 /* Block with-bg-color */
 .with-bg-color {
   border-radius: 4px;
+}
+
+/* Makes texts in bg always readable */
+.with-bg-color * {
+  color: white !important;
+  border-color: white !important;
 }
 
 /* Page properties */
