@@ -29,11 +29,11 @@
 :root {
     --ct-text-size: 16px;
     --ct-line-height: 1.6;
-    --ls-font-family: "Only Emoji", "system-ui", sans-serif;
+    --ls-font-family: "Only Emoji", "system-ui", sans-serif, "Hack Nerd Font";
     // --ls-font-family: "Only Emoji", "Source Sans 3 VF", "Source Han Sans VF", sans-serif;
     --ct-page-title-font-family: var(--ls-font-family);
     // --ct-code-font-family: "JetBrains Mono", monospace;
-    --ct-code-font-family: "Fira Code", monospace;
+    --ct-code-font-family: "Fira Code", monospace, "Hack Nerd Font";
 }
 
 html,
