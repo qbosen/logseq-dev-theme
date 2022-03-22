@@ -9,8 +9,12 @@ $marks:( // 注释用来防止格式化合并
 'orange':#ffb86c, //
 'purple':#d2b3ff, //
 );
-// class style
+$decoration-style: underline;
+// mark style
 mark {
+    text-decoration: $decoration-style;
+    text-decoration-thickness: 3px;
+    text-underline-offset: -1px;
     text-decoration-color: #ffc600;
     @each $class,
     $color in $marks {
@@ -26,14 +30,25 @@ $color in $marks {
     span[data-ref="##{$class}"] {
         display: none;
         &+mark {
+            background: unset;
             text-decoration-color: $color;
         }
     }
     span[data-ref="\$#{$class}"] {
         display: none;
         &+mark {
+            background: unset;
             color: $color;
             text-decoration: unset;
         }
+    }
+    mark.\##{$class} {
+        text-decoration-color: $color;
+        background: unset;
+    }
+    mark.\$#{$class} {
+        color: $color;
+        text-decoration: unset;
+        background: unset;
     }
 }

@@ -1376,6 +1376,9 @@ html[data-theme=light] {
 }
 
 mark {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: -1px;
   text-decoration-color: #ffc600;
 }
 mark.yellow {
@@ -1410,6 +1413,7 @@ span[data-ref="#yellow"] {
   display: none;
 }
 span[data-ref="#yellow"] + mark {
+  background: unset;
   text-decoration-color: #fff3a3;
 }
 
@@ -1417,14 +1421,27 @@ span[data-ref="$yellow"] {
   display: none;
 }
 span[data-ref="$yellow"] + mark {
+  background: unset;
   color: #fff3a3;
   text-decoration: unset;
+}
+
+mark.\#yellow {
+  text-decoration-color: #fff3a3;
+  background: unset;
+}
+
+mark.\$yellow {
+  color: #fff3a3;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#pink"] {
   display: none;
 }
 span[data-ref="#pink"] + mark {
+  background: unset;
   text-decoration-color: #f2b3cf;
 }
 
@@ -1432,14 +1449,27 @@ span[data-ref="$pink"] {
   display: none;
 }
 span[data-ref="$pink"] + mark {
+  background: unset;
   color: #f2b3cf;
   text-decoration: unset;
+}
+
+mark.\#pink {
+  text-decoration-color: #f2b3cf;
+  background: unset;
+}
+
+mark.\$pink {
+  color: #f2b3cf;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#blue"] {
   display: none;
 }
 span[data-ref="#blue"] + mark {
+  background: unset;
   text-decoration-color: #b5d3ff;
 }
 
@@ -1447,14 +1477,27 @@ span[data-ref="$blue"] {
   display: none;
 }
 span[data-ref="$blue"] + mark {
+  background: unset;
   color: #b5d3ff;
   text-decoration: unset;
+}
+
+mark.\#blue {
+  text-decoration-color: #b5d3ff;
+  background: unset;
+}
+
+mark.\$blue {
+  color: #b5d3ff;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#green"] {
   display: none;
 }
 span[data-ref="#green"] + mark {
+  background: unset;
   text-decoration-color: #bbfabb;
 }
 
@@ -1462,14 +1505,27 @@ span[data-ref="$green"] {
   display: none;
 }
 span[data-ref="$green"] + mark {
+  background: unset;
   color: #bbfabb;
   text-decoration: unset;
+}
+
+mark.\#green {
+  text-decoration-color: #bbfabb;
+  background: unset;
+}
+
+mark.\$green {
+  color: #bbfabb;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#red"] {
   display: none;
 }
 span[data-ref="#red"] + mark {
+  background: unset;
   text-decoration-color: #ff5582;
 }
 
@@ -1477,14 +1533,27 @@ span[data-ref="$red"] {
   display: none;
 }
 span[data-ref="$red"] + mark {
+  background: unset;
   color: #ff5582;
   text-decoration: unset;
+}
+
+mark.\#red {
+  text-decoration-color: #ff5582;
+  background: unset;
+}
+
+mark.\$red {
+  color: #ff5582;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#grey"] {
   display: none;
 }
 span[data-ref="#grey"] + mark {
+  background: unset;
   text-decoration-color: #cacfd9;
 }
 
@@ -1492,14 +1561,27 @@ span[data-ref="$grey"] {
   display: none;
 }
 span[data-ref="$grey"] + mark {
+  background: unset;
   color: #cacfd9;
   text-decoration: unset;
+}
+
+mark.\#grey {
+  text-decoration-color: #cacfd9;
+  background: unset;
+}
+
+mark.\$grey {
+  color: #cacfd9;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#gray"] {
   display: none;
 }
 span[data-ref="#gray"] + mark {
+  background: unset;
   text-decoration-color: #cacfd9;
 }
 
@@ -1507,14 +1589,27 @@ span[data-ref="$gray"] {
   display: none;
 }
 span[data-ref="$gray"] + mark {
+  background: unset;
   color: #cacfd9;
   text-decoration: unset;
+}
+
+mark.\#gray {
+  text-decoration-color: #cacfd9;
+  background: unset;
+}
+
+mark.\$gray {
+  color: #cacfd9;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#orange"] {
   display: none;
 }
 span[data-ref="#orange"] + mark {
+  background: unset;
   text-decoration-color: #ffb86c;
 }
 
@@ -1522,14 +1617,27 @@ span[data-ref="$orange"] {
   display: none;
 }
 span[data-ref="$orange"] + mark {
+  background: unset;
   color: #ffb86c;
   text-decoration: unset;
+}
+
+mark.\#orange {
+  text-decoration-color: #ffb86c;
+  background: unset;
+}
+
+mark.\$orange {
+  color: #ffb86c;
+  text-decoration: unset;
+  background: unset;
 }
 
 span[data-ref="#purple"] {
   display: none;
 }
 span[data-ref="#purple"] + mark {
+  background: unset;
   text-decoration-color: #d2b3ff;
 }
 
@@ -1537,8 +1645,20 @@ span[data-ref="$purple"] {
   display: none;
 }
 span[data-ref="$purple"] + mark {
+  background: unset;
   color: #d2b3ff;
   text-decoration: unset;
+}
+
+mark.\#purple {
+  text-decoration-color: #d2b3ff;
+  background: unset;
+}
+
+mark.\$purple {
+  color: #d2b3ff;
+  text-decoration: unset;
+  background: unset;
 }
 
 a.tag[data-ref="fleeting notes"] {
@@ -1644,7 +1764,11 @@ a[data-ref="daily log"] {
   margin-right: 1.5em;
 }
 
-a[data-ref="fleeting notes"] {
+a[data-ref="work log"] {
+  margin-right: 1.5em;
+}
+
+a[data-ref="private log fleeting notes"] {
   margin-right: 1.5em;
 }
 
@@ -1664,53 +1788,38 @@ a[data-ref="reference notes"] {
   margin-right: 1.5em;
 }
 
-a[data-ref=inbox] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref=inbox]::before {
   content: "📥 ";
   display: inline-block;
 }
 
-a[data-ref="mit 3"] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref="mit 3"]::before {
   content: "⭐ ";
   display: inline-block;
 }
 
-a[data-ref="daily reading"] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref="daily reading"]::before {
   content: "📖 ";
   display: inline-block;
 }
 
-a[data-ref=tasks] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref=tasks]::before {
   content: "💻 ";
   display: inline-block;
 }
 
-a[data-ref="daily log"] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref="daily log"]::before {
-  content: "📃 ";
+  content: "🗓 ";
+  display: inline-block;
+}
+
+a[data-ref="work log"]::before {
+  content: "📋 ";
+  display: inline-block;
+}
+
+a[data-ref="private log"]::before {
+  content: "📝 ";
   display: inline-block;
 }
 
@@ -1718,7 +1827,6 @@ a.tag[data-ref^=project] {
   border-color: #b6fff5 !important;
   background: #b6fff5 !important;
   color: #000 !important;
-  border: 2px solid #b6fff5;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1734,31 +1842,16 @@ a.tag[data-ref^=project]::before {
   display: inline-block;
 }
 
-a.page-ref[data-ref^=project] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a.page-ref[data-ref^=project]::before {
   content: "🎯 ";
   display: inline-block;
 }
 
-a[data-ref^=resource] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref^=resource]::before {
   content: "🗂️ ";
   display: inline-block;
 }
 
-a[data-ref^=area] {
-  border-color: "" !important;
-  background: "" !important;
-  color: "" !important;
-}
 a[data-ref^=area]::before {
   content: "🌏 ";
   display: inline-block;
@@ -1768,7 +1861,6 @@ a.tag[data-ref^=fitiness] {
   border-color: #87c843 !important;
   background: #87c843 !important;
   color: #000 !important;
-  border: 2px solid #87c843;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1788,7 +1880,6 @@ a.tag[data-ref=example] {
   border-color: #41e5eb !important;
   background: #41e5eb !important;
   color: #000 !important;
-  border: 2px solid #41e5eb;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1808,7 +1899,6 @@ a.tag[data-ref=question] {
   border-color: #FFB6C1 !important;
   background: #FFB6C1 !important;
   color: #000 !important;
-  border: 2px solid #FFB6C1;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1828,7 +1918,6 @@ a.tag[data-ref=answer] {
   border-color: #b6ffb6 !important;
   background: #b6ffb6 !important;
   color: #000 !important;
-  border: 2px solid #b6ffb6;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1848,7 +1937,6 @@ a.tag[data-ref^=recommend] {
   border-color: #f37777 !important;
   background: #f37777 !important;
   color: #000 !important;
-  border: 2px solid #f37777;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1868,7 +1956,6 @@ a.tag[data-ref=quotes] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
-  border: 2px solid #83ea9e;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1888,7 +1975,6 @@ a.tag[data-ref=summary] {
   border-color: #83ea9e !important;
   background: #83ea9e !important;
   color: #000 !important;
-  border: 2px solid #83ea9e;
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -1901,6 +1987,14 @@ a.tag[data-ref=summary]:hover {
 }
 a.tag[data-ref=summary]::before {
   content: "💡 ";
+  display: inline-block;
+}
+
+a.tag[data-ref=output] {
+  color: #6ccec1 !important;
+}
+a.tag[data-ref=output]::before {
+  content: "  ";
   display: inline-block;
 }
 

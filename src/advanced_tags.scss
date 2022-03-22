@@ -18,28 +18,32 @@
         @return $item+$select-attr;
     }
     
-    @mixin content-style($bg-color:inherit, $font-color:inherit, $prefix-content:'', $with-border:true) {
-        @if $bg-color {
+    @mixin content-style($bg-color:inherit, $font-color:inherit, $prefix-content:'', $with-border:true, $border-color:inherit) {
+        @if type-of($bg-color) == color {
             border-color: $bg-color !important;
             background: $bg-color !important;
         }
-        @if $font-color {
+        @if type-of($font-color) == color {
             color: $font-color !important;
         }
         @if $with-border {
-            border: 2px solid $bg-color;
+            @if type-of($border-color) == color {
+                border: 2px solid $border-color;
+            }
             padding: 0 4px;
             border-radius: 4px;
             font-weight: 600;
             line-height: 1.4;
             font-size: 0.8em;
-            &:hover {
-                $hover-color: adjust-color($bg-color, $whiteness: 5%);
-                background: $hover-color !important;
-                border-color: $hover-color !important;
+            @if type-of($bg-color) == color {
+                &:hover {
+                    $hover-color: adjust-color($bg-color, $whiteness: 5%);
+                    background: $hover-color !important;
+                    border-color: $hover-color !important;
+                } 
             }
         }
-        @if $prefix-content {
+        @if $prefix-content != '' {
             &::before {
                 content: "#{$prefix-content} ";
                 display: inline-block;
@@ -47,14 +51,14 @@
         }
     }
     
-    @mixin ref-style($data-ref, $match-prefix:false, $with-border:true, $prefix-content:'', $type:'tag', $bg-color:'', $font-color:'') {
+    @mixin ref-style($data-ref, $match-prefix:false, $with-border:true, $prefix-content:'', $type:'tag', $bg-color:inherit, $font-color:inherit, $border-color:inherit) {
         $select-item: select-item($data-ref, $match-prefix, $type);
         #{$select-item} {
-            @include content-style($bg-color, $font-color, $prefix-content, $with-border)
+            @include content-style($bg-color, $font-color, $prefix-content, $with-border, $border-color)
         }
     }
     
-    $margin_refs: ('inbox', 'mit 3', 'daily reading', 'tasks', 'daily log', // journals
+    $margin_refs: ('inbox', 'mit 3', 'daily reading', 'tasks', 'daily log', 'work log', 'private log'// journals
     "fleeting notes", "literature notes", "permanent notes", "relevant notes", "reference notes" //zettelkasten
     );
     @each $margin_ref in $margin_refs {
@@ -67,7 +71,9 @@
     @include ref-style('mit 3', false, false, "⭐", 'both');
     @include ref-style('daily reading', false, false, "📖", 'both');
     @include ref-style('tasks', false, false, "💻", 'both');
-    @include ref-style('daily log', false, false, "📃", 'both');
+    @include ref-style('daily log', false, false, "🗓", 'both');
+    @include ref-style('work log', false, false, "📋", 'both');
+    @include ref-style('private log', false, false, "📝", 'both');
     @include ref-style('project', true, true, "🎯", 'tag', #b6fff5, #000);
     @include ref-style('project', true, false, "🎯", 'page');
     @include ref-style('resource', true, false, "🗂️", 'both');
@@ -80,3 +86,4 @@
     @include ref-style('quotes', false, true, "📎", 'tag', #83ea9e, #000);
     // @include ref-style('quote', false, true, "", 'tag', #83ea9e, #000);
     @include ref-style('summary', false, true, "💡", 'tag', #83ea9e, #000);
+    @include ref-style('output', false, false, " ", 'tag', '', #6ccec1);
