@@ -542,6 +542,10 @@ a.title h1.title {
   display: none;
 }
 
+.doc-mode .block-children {
+  border-left-width: 0px !important;
+}
+
 :root {
   --ls-block-bullet-active-color: var(--ls-link-text-color);
   --ls-block-bullet-threading-width: var(
@@ -674,6 +678,10 @@ a.title h1.title {
 .doc-mode .ls-block::before,
 .doc-mode .ls-block::after {
   display: none;
+}
+
+.doc-mode .block-children {
+  border-left-width: 0px !important;
 }
 
 :root {
