@@ -3,9 +3,14 @@
     --ct-sidebar-resizer-background-hover: var(--ct-primary-color);
 }
 
+#left-container {
+  overflow: auto !important;
+}
+
 #main-container {
-    position: absolute;
-    width: 100%;
+  height: auto !important;
+  position: absolute;
+  width: 100%;
 }
 
 .theme-inner {
@@ -13,7 +18,7 @@
 }
 
 #main-content-container {
-    margin-top: var(--ct-header-height) !important;
+  padding-top: var(--ct-header-height) !important;
 }
 
 .page {
