@@ -2109,3 +2109,7 @@ html.is-ios .page-blocks-inner {
   padding-right: 4px;
 } */
 /*ios 展开交互结束*/
+.myquote-en,
+.myquote-ch {
+  color: #4eb294;
+}

@@ -10,33 +10,35 @@
 } */
 
 .giscus .giscus-frame {
-    width: 100%;
+  width: 100%;
 }
 
 
 /* 宽屏模式下 代码也变宽 */
 
 .extensions__code>.CodeMirror {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
 table.mytable {
-    border-collapse: collapse;
-    border-spacing: 0;
-    td {
-        text-align: center;
-        vertical-align: middle;
-        border-color: #e9ecef;
-        border-style: solid;
-        border-width: 1px;
-    }
-    th {
-        text-align: center;
-        vertical-align: middle;
-        border-color: #e9ecef;
-        border-style: solid;
-        border-width: 1px;
-    }
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+    border-color: #e9ecef;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  th {
+    text-align: center;
+    vertical-align: middle;
+    border-color: #e9ecef;
+    border-style: solid;
+    border-width: 1px;
+  }
 }
 
 
@@ -69,3 +71,8 @@ html.is-ios .page-blocks-inner {
 
 
 /*ios 展开交互结束*/
+
+.myquote-en,
+.myquote-ch {
+  color: #4eb294;
+}
