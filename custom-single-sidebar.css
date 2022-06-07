@@ -2065,6 +2065,10 @@ a.tag[data-ref=output]::before {
   max-width: 100% !important;
 }
 
+.extensions__code > .code-editor {
+  margin-top: 0 !important;
+}
+
 table.mytable {
   border-collapse: collapse;
   border-spacing: 0;
