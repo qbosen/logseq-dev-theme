@@ -8,7 +8,7 @@ html[data-theme="dark"] {
   --ct-secondary-color: #6096ba;
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
-  --ct-highlight-color: #ffc600;
+  --ct-highlight-color: #d3a400;
 
   --color-level-1: #313942;
   --color-level-2: #38434c;
@@ -56,7 +56,6 @@ html[data-theme="dark"] {
 
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
 
-  /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
 
   --ls-selection-color: #000;

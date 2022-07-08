@@ -131,12 +131,12 @@ a.tag:hover {
 
 .page-properties,
 .block-properties {
-    margin: 0 0 0.5em -8px;
-    font-size: 0.8em;
-    background: var(--ls-secondary-background-color);
-    width: fit-content;
-    padding-right: 2rem;
-    max-width: var(--ct-block-max-width);
+  margin: 0 0 0.5em;
+  font-size: 0.8em;
+  background: var(--ls-secondary-background-color);
+  width: fit-content;
+  padding-right: 2rem;
+  max-width: var(--ct-block-max-width);
 }
 
 .sidebar-item-list {
@@ -227,6 +227,6 @@ progress::-webkit-progress-value {
   max-width: 100%;
 }
 
-.rc-datepicker {
-  color: #333;
+.page-icon {
+  font-family: 'Inter', sans-serif;
 }
