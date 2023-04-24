@@ -2110,6 +2110,20 @@ html.is-ios .page-blocks-inner {
   color: #4eb294;
 }
 
+span[data-ref="#cloze"] {
+  display: none;
+}
+
+span[data-ref="#cloze"] + mark {
+  color: transparent !important;
+  background: transparent !important;
+  text-decoration: underline 1px dashed var(--ls-primary-text-color) !important;
+}
+
+span[data-ref="#cloze"] + mark:hover {
+  color: var(--ls-primary-text-color) !important;
+}
+
 /*
 Resources to help with icons:
 

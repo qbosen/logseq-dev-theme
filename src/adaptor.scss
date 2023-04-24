@@ -80,3 +80,18 @@ html.is-ios .page-blocks-inner {
 .myquote-ch {
   color: #4eb294;
 }
+
+span[data-ref="#cloze"] {
+  display: none;
+}
+
+span[data-ref="#cloze"]+mark {
+  color: transparent !important;
+  background: transparent !important;
+  text-decoration: underline 1px dashed var(--ls-primary-text-color) !important;
+  text-underline-offset: 4px;
+}
+
+span[data-ref="#cloze"]+mark:hover {
+  color: var(--ls-primary-text-color) !important;
+}
