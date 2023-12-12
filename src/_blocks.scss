@@ -30,6 +30,10 @@
     display: inline;
 }
 
+.block-ref .block-body > .cp__fenced-code-block div {
+    display: block !important;
+}
+
 .block-ref .flex.flex-row.justify-between {
     display: inline;
 }
@@ -83,7 +87,11 @@ a:hover>.bullet-container .bullet {
     margin-left: 0 !important;
 }
 
-.ls-block div.items-center {
+// .ls-block div.items-center {
+//   position: relative;
+//   height: 26px !important;
+// }
+.ls-block div.block-control-wrap {
     position: relative;
     height: 26px !important;
 }
@@ -132,4 +140,17 @@ a:hover>.bullet-container .bullet {
   color: var(--ls-primary-text-color);
   opacity: 0.6 !important;
   transform: scale(0.9);
+}
+
+// https://github.com/pengx17/logseq-dev-theme/issues/77 
+// add space between content, time cost and scheduled date when references
+.block-ref a.fade-link::before, .block-ref a.fade-link::after,
+.block-ref .timestamp .opacity-80::before, .block-ref .timestamp .opacity-80::after {
+    content: "    ";
+}
+
+.block-ref a.fade-link,
+.block-ref .timestamp-label, 
+.block-ref .timestamp .opacity-80 {
+    font-size: 75% !important;
 }

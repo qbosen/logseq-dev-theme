@@ -1,5 +1,5 @@
+<<<<<<< HEAD
 ## [1.2.1](https://github.com/qbosen/logseq-dev-theme/compare/v1.2.0...v1.2.1) (2022-01-07)
-
 
 ### Bug Fixes
 

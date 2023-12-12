@@ -100,11 +100,10 @@
     height: 100%;
 }
 
-.left-sidebar-inner>.wrap {
-    margin-top: 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    height: calc(100% - var(--ct-header-height));
+.left-sidebar-inner > .wrap {
+  margin-top: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .left-sidebar-inner a.item>span {

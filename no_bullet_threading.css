@@ -213,7 +213,6 @@ html.is-native-iphone #left-sidebar {
   margin-top: 0;
   padding-top: 12px;
   padding-bottom: 12px;
-  height: calc(100% - var(--ct-header-height));
 }
 
 .left-sidebar-inner a.item > span {
@@ -398,6 +397,10 @@ a.title h1.title {
   display: inline;
 }
 
+.block-ref .block-body > .cp__fenced-code-block div {
+  display: block !important;
+}
+
 .block-ref .flex.flex-row.justify-between {
   display: inline;
 }
@@ -451,7 +454,7 @@ a:hover > .bullet-container .bullet {
   margin-left: 0 !important;
 }
 
-.ls-block div.items-center {
+.ls-block div.block-control-wrap {
   position: relative;
   height: 26px !important;
 }
@@ -495,6 +498,17 @@ a:hover > .bullet-container .bullet {
   color: var(--ls-primary-text-color);
   opacity: 0.6 !important;
   transform: scale(0.9);
+}
+
+.block-ref a.fade-link::before, .block-ref a.fade-link::after,
+.block-ref .timestamp .opacity-80::before, .block-ref .timestamp .opacity-80::after {
+  content: "    ";
+}
+
+.block-ref a.fade-link,
+.block-ref .timestamp-label,
+.block-ref .timestamp .opacity-80 {
+  font-size: 75% !important;
 }
 
 /* embed */
@@ -666,9 +680,9 @@ a.tag:hover {
 /* Page properties */
 .page-properties,
 .block-properties {
+  --ls-page-properties-background-color: var(--ls-secondary-background-color);
   margin: 0 0 0.5em;
   font-size: 0.8em;
-  background: var(--ls-secondary-background-color);
   width: fit-content;
   padding-right: 2rem;
   max-width: var(--ct-block-max-width);
@@ -676,7 +690,7 @@ a.tag:hover {
 
 .sidebar-item-list .page-properties,
 .sidebar-item-list .block-properties {
-  background: var(--ls-tertiary-background-color);
+  --ls-page-properties-background-color: var(--ls-tertiary-background-color);
 }
 
 /* Progress bar */
@@ -994,13 +1008,12 @@ a.tooltip-priority:first-of-type::before {
   font-size: var(--ct-inline-code-font-size);
 }
 
-.cp__sidebar-main-content[data-is-global-graph-pages=true] {
+body[data-page=graph] .cp__sidebar-main-content {
   --graph-height: calc(100vh - var(--ct-header-height));
   background: var(--ls-primary-background-color);
   max-height: var(--graph-height);
-  margin: -1rem;
 }
-.cp__sidebar-main-content[data-is-global-graph-pages=true] > div {
+body[data-page=graph] .cp__sidebar-main-content > div {
   padding: 0;
 }
 
@@ -1108,7 +1121,7 @@ html[data-theme=white] {
   --ls-icon-color: var(--ls-primary-text-color);
   --ct-block-reference-background: rgba(16, 107, 163, 0.1);
   --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
-  --ls-page-properties-background-color: var(--ls-tertiary-background-color);
+  --ls-page-properties-background-color: var(--ls-secondary-background-color);
   --ls-selection-color: #fff;
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
 }
