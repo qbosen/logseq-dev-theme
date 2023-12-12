@@ -31,8 +31,9 @@
 }
 
 .sidebar-item-list {
-    padding-top: var(--ct-header-height);
-    position: absolute;
+    /* 2023-12-12 使用 Tabbed Sidebar 插件; 取消固定 */
+    // padding-top: var(--ct-header-height);
+    // position: absolute;
     top: 0;
     width: 100%;
     padding-left: 1rem;

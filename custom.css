@@ -147,8 +147,7 @@ html.is-native-iphone #left-sidebar {
 }
 
 .sidebar-item-list {
-  padding-top: var(--ct-header-height);
-  position: absolute;
+  /* 2023-12-12 使用 Tabbed Sidebar 插件; 取消固定 */
   top: 0;
   width: 100%;
   padding-left: 1rem;
@@ -560,12 +559,6 @@ a.title h1.title {
   /* Fixme: overflow? */
 }
 
-.block-content-wrapper > div:first-child {
-  padding: 1px;
-  margin: -1px;
-  overflow-x: auto;
-}
-
 .bullet-container {
   height: 14px !important;
   width: 14px !important;
@@ -583,7 +576,7 @@ a.title h1.title {
   background-color: var(--ls-block-bullet-active-color);
   box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
 }
-.ls-block div.items-center {
+.ls-block div.block-control-wrap {
   position: relative;
   height: 26px !important;
 }
@@ -602,7 +595,7 @@ a.title h1.title {
   pointer-events: none;
   content: "";
   left: calc(var(--ls-block-bullet-threading-width) * -1);
-  right: 6px;
+  right: 20px;
   top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
   bottom: 50%;
   /* shift left 1px for border */
@@ -634,7 +627,7 @@ a.title h1.title {
   content: "";
   top: 12px;
   bottom: 0;
-  left: -15px;
+  left: -21px;
   position: absolute;
   border-left: var(--ls-block-bullet-threading-width) solid transparent;
 }
@@ -2185,6 +2178,7 @@ span[data-ref="#cloze"] + mark {
   color: transparent !important;
   background: transparent !important;
   text-decoration: underline 1px dashed var(--ls-primary-text-color) !important;
+  text-underline-offset: 4px;
 }
 
 span[data-ref="#cloze"] + mark:hover {
